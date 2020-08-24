@@ -1,0 +1,130 @@
+\chapter{Hur projektgruppen använt de verktyg som valts för utveckling av mjukvara av Jonathan Wahlund}
+\section{Inledning}
+\label{cha:jonathan-introduction}
+Den livsstil människan har idag skulle troligen inte vara möjlig om man inte hade verktyg för att konstant förbättra befintliga och utveckla nya saker. Alla ingenjörsrelaterade utvecklingsprojekt i vår tid kräver i sin tur välutvecklade verktyg för att få själva utvecklingsprocesserna att fungera bra och effektivt.
+\\\\
+Människan har därför länge utvecklat verktyg också för att förbättra och förenkla utvecklingsprocesserna. Detta har lett till att uppgifter kan utföras bättre och man kan nå högre resultat i de saker som görs. Dåliga verktyg som inte fungerar på ett sätt som påverkar ett projekts utveckling negativt kan vara förödande. De kan sakta ner själva utvecklingen och kanske till och med sätta stopp för den. Valet av verktyg i utvecklingsprocessen är därför mycket viktigt. 
+\\\\
+För att kontinuerligt förbättra utvecklingsprocessen är det därför viktigt att fortlöpande utvärdera de verktyg man använder – verktyg för att kommunicera och följa vad var och en i ett utvecklingsteam ska göra, vad som ska testas när och hur, samt ha en väl strukturerad versionshantering. Det är viktigt att systematiskt ta fram vad som gått bra och vad som gått dåligt och utifrån detta byta verktyg eller förbättra de man använt.
+
+\subsection{Syfte}
+\label{sec:jonathan-aim}
+Studien i sin helhet handlar om kandidatarbetet som utförs av grupp två i kursen TDDD96 våren 2017. Syftet med denna studie är att berätta vilka verktyg projektgruppen använt sig av i utvecklingen av mjukvaran i detta projekt, analysera hur dessa verktyg har fungerat i och hur de bidragit till projektgruppens utvecklingsprocess samt föreslå hur verktygen och utvecklingsprocessen kan förbättras. 
+
+\subsection{Frågeställningar}
+\label{sec:jonathan-research-questions}
+För att uppfylla syftet så ställs följande frågeställningar:
+
+\begin{enumerate}
+\item \textit{Vilka verktyg har projektgruppen använt sig av och hur har de fungerat i projektgruppens utvecklingsprocess?}
+\item \textit{Hur skulle verktygen och utvecklingsprocessen kunna förbättras?}
+\end{enumerate}
+
+\subsection{Avgränsningar}
+\label{sec:jonathan-delimitations}
+Studien handlar om kandidatarbetet som utförs av grupp två i kursen TDDD96 våren 2017 och analyserna avgränsas till utvecklingsprocessen och de verktyg som använts i detta arbete.
+
+\section{Bakgrund}
+\label{cha:jonathan-bakgrund}
+Kandidatarbetet handlade om att för en extern kund producera en slutprodukt i form av en webbapplikation. Webbapplikationen skulle skrivas i JavaScript och Meteor. Gruppen behövde ta beslut om vilka verktyg som skulle användas och det är detta som denna rapport fokuserar på.
+
+\section{Teori, metod och källor}
+\label{cha:jonathan-theory}
+För att samla in information och fakta om verktygen som projektgruppen använt har framför allt verktygsproducenternas egna hemsidor använts.
+\\\\
+För att analysera hur verktygen fungerat i projektgruppens utvecklingsprocess har gruppmedlemmarnas erfarenheter av, åsikter om och synpunkter på verktygen och användningen av dem i utvecklingsprocessen undersökts. Svaren jämfördes med simpel statistik uthämtat från verktygen för att kunna bedöma om svaren är rimliga.
+\\\\
+Enkäten innehöll frågor om hur de verktyg man använt har fungerat över lag och hur man upplever att varje enskilt verktyg påverkat utvecklingen av mjukvaran inom projektet. Där fanns även frågor angående specifika fördelar och nackdelar med verktygen. Utöver enkäten tas allmänna problem som projektgruppen stötte på och hur de löste, eller inte löste dessa upp.
+\\\\
+Som stöd i diskussionen om förbättringar hämtades information från Donald A Normans bok \textit{The Design of Everyday Things} från 2013 \cite{book:the-design-of-everyday-things} där han diskuterar problemet med dåligt designade varor och även berör vikten av användarvänliga gränssnitt i programmeringsverktyg. Information hämtades även från boken \textit{Interaktionsdesign och UX: om att skapa en god användarupplevelse}, av Mattias Arvola, utgiven 2014  \cite{arvolaboken}
+
+\subsection{Valda verktyg i utvecklingsprocessen}
+Denna del listar och beskriver de verktyg som projektgruppen valde att använda.
+\begin{itemize}
+  \item Trello, se avsnitt \ref{sec:theory-trello}.
+  \item Git, se avsnitt \ref{sec:theory-git}. Det var tänkt att varje Trello-kort skulle få sin egen funktionalitetsgren i Git utifrån projektgruppens huvudkod. Senare, när kortet väl blivit godkänt skulle det föras tillbaka in i utvecklingsgrenen. Detta var den generella tanken med relationen mellan Trello och Git.
+  \item Slack, se avsnitt \ref{sec:theory-slack}. Slack är den plattform projektgruppen valde att använda för skriftlig kommunikation när de inte är fysiskt närvarande.
+  \item WebStorm är ett textredigeringsprogram för att koda JavaScript och utföra allmän webbutveckling och är utvecklad av JetBrains. \cite{website:webstorm} WebStorm är kompatibelt med Meteor och man kan starta Meteor-servern via textredigeringsprogrammet. WebStorm har även inbyggd funktionalitet för Git.
+\end{itemize}
+
+\section{Resultat och analys}
+\label{cha:jonathan-results}
+Här ges en bild av hur verktygen fungerat i projektgruppens utvecklingsprocess och det förklaras hur de olika verktygen hänger ihop. Git - som anses ha haft extra stor betydelse i utvecklingsprocessen kommer gås igenom något mer utförligt.
+
+\subsection{Redogörelse för använda verktyg i utvecklingsprocessen}
+Eftersom alla i projektgruppen är relativt unga och har olika mycket erfarenhet av datautveckling så var det inte så mycket diskussion om valen av verktyg. De mer erfarnas åsikter vägde av naturliga skäl tyngre. Detta betyder inte att valen de gjorde var optimala eller att verktygen alltid användes på rätt sätt.
+
+\subsubsection{Trello}
+Projektgruppen har använt Trello för att hålla reda på vad som ska utvecklas, av vem och i vilken ordning. Varje uppgift har fått sitt eget Trello-kort och detta kort har markerats med etiketter motsvarande problemets typ och relevant krav. På ett Trello-kort taggas personer som ska utföra uppgiften. Där skrivs också kommentarer in med information om kortet som behöver kommuniceras till de övriga utvecklarna i gruppen.
+\\\\
+När en uppgift anses vara utförd placeras kortet i en granskningslista där man anger vilka tester resultatet behöver passera för att anses vara slutförd och godkänd. När kortet testats av en testare anses den nya koden fungera.
+\\\\
+Projektgruppen valde Trello eftersom ett verktyg önskades där projektgruppen kunde styra och ha kontroll över utvecklingsprocessen och då gruppen inte hade så många alternativ att jämföra med. Dessutom rekommenderades Trello från kurshemsidan.
+
+\subsubsection{Git}
+Projektgruppen valde att använda sig av GitLab som är en webbapplikation där man kan hantera versionshanteringsarkiv. Projektgruppen använde sig av ett versionshanteringsarkiv som universitetet tillhandahåller via GitLab.
+\\\\
+Projektgruppen använde sig av terminalen som klientprogram vilket betyder att kommandon skrivs in i kommandotolken.
+
+\subsubsection{Slack}
+Det som gjorde Slack attraktivt var möjligheten att koppla det till GitLab och Trello för att kommunicera uppdateringar om de andra utvecklarnas arbete till en chattkanal i Slack. Den separerar också det seriösa projektarbetet ifrån sociala medier som annars skulle kunna tänkas användas för kommunikation. Slack möjliggjorde att projektgruppen i olika kanaler kunde koncentrera kommunikationen inom utvecklingen.
+
+\subsubsection{WebStorm}
+Projektgruppen gjorde inte ett gemensamt beslut att använda detta verktyg, utan förlitade sig på en rekommendation från konfigurationsansvarig. Konfigurationsansvarig hade erfarenhet av WebStorm och kunde då hjälpa de andra. WebStorm gjorde det lätt att hitta i all den kod gruppen producerat och indikerade direkt när något var fel i koden. Ingen i gruppen använde sig av det inbyggda gränssnitten för att utföra Git-kommandon.
+
+\subsection{Analys av använda verktyg och projektgruppens utvecklingsprocess}
+I detta stycke redovisas först svaren från enkäten som kan ses i \ref{cha:verktyg_enkat_fragor}, vilka därefter analyseras. Svaren till enkäten kan ses i \ref{cha:verktyg_enkat_resultat}.
+
+\subsubsection{Analys utifrån enkätsvar}
+Svaren på fråga ett som handlar om hur mycket tid varje enskild person tycker att de lagt på utveckling av mjukvara antyder att nästan alla i projektgruppen känner att de varit delaktiga i utvecklingen. Detta gör att deras åsikter om hur verktygen har fungerat kan anses vara trovärdiga. Själva mjukvaruutvecklingen fördelades relativt jämnt mellan gruppmedlemmarna, med undantag för en som har tagit ett större ansvar för just detta, och en som inte var lika delaktig i själva programmeringen.
+\\\\
+Man kan också tydligt se att majoriteten av gruppmedlemmarna tycker att alla de verktyg som tagits upp har påverkat utvecklingen positivt. Man kan samtidigt se en tendens att kompetensen att använda Git saknades för många och att detta ansågs vara ett problem. Vissa ansåg även att de inte fått hjälp när de behövt.
+\\\\
+Alla har använt sig av textredigeringsprogrammet WebStorm, vilket inte kan ses som särskilt uppseendeväckande, då inget aktivt val av textredigeringsprogram har skett. Projektgruppens medlemmar gick helt på en rekommendation. Projektgruppen som helhet verkar nöjda med den.
+\\\\
+Trello är ett verktyg som alla i projektgruppen verkar nöjda med. Att ha ordning och reda på vilka uppgifter som behöver göras, av vem, i vilken ordning verkar vara mycket viktigt för att på ett smidigt sätt kunna utföra själva utvecklingen av mjukvaran. Det finns ingen konkret statistik att hämta från Trello men alla medlemmar har använd appen och gjort det de ska på de kort som de har varit delaktiga i.
+\\\\
+Kommunikationen blev felaktig när både Slack och Trello användes för att diskutera samma uppgift, detta bidrog till förvirring men det blev bättre under projektets gång då medlemmarna hittade ett fungerande arbetsflöde. Många upplevde att det var svårt att se flödet, vilka saker som byggde på varandra, och i vilken ordning de skulle utföras. Detta ledde till att det blev svårare att se helheten i projektet och var man låg i hela processen. 
+\\\\
+Git har varit betydelsefullt och centralt för arbetet med utvecklingen och alla utom en gruppmedlem tycker också att det bidragit positivt till resultatet. Samtidigt är Git det verktyg som varit svårast att lära sig. Mängden kod uppskickat till versionshanteringsarkivet stämmer ganska bra med hur mycket utvecklingstid som gruppmedlemmarna tycker sig ha lagt ner om man jämför  med de överblickande graferna som GitLab tillhandahåller.
+\\\\
+De flesta problem som uppstod i projektet var samtidigt kopplade till just Git. Många var osäkra på hur man skulle göra och hur man utförde kommandon på rätt sätt. Vissa hade problem med att uppfatta vad som hände när de gjorde kommandon, eller så förstod de inte felmeddelandena och antog att andra hade gjort fel. I vissa fall bidrog detta till temporärt dålig stämning och sämre samarbete mellan medlemmarna. Andra använde helt enkelt fel kommandon och skapade därmed fel i versionshanteringen, som i sin tur behövde fixas innan man kunde återgå till att använda versionshanteringsarkivet.
+\\\\
+Vad gäller utveckling av själva verktygen önskas till exempel möjligheten till videokonferenser, prioritering av kort i Trello samt att tydligare kunna se flödesscheman där det visas vilka saker som bygger på varandra och i vilken ordning sakerna ska göras. Trello saknar detta. Ett annat önskemål är ett system som kräver validering och testning av kod innan den laddas upp i versionshanteringsarkivet. Inga önskemål om WebStorm kom fram vilket visar på att WebStorm har tillfredsställt alla gruppmedlemmar.
+
+\section{Diskussion}
+\label{cha:jonathan-diskussion}
+Syftet med denna studie har varit att berätta vilka verktyg projektgruppen använt sig av i utveckling av mjukvaran i detta projekt, analysera hur dessa verktyg har fungerat i och hur de bidragit till utvecklingsprocessen samt föreslå hur verktygen och utvecklingsprocessen kan förbättras.
+\\\\
+För att uppfylla syftet ställdes följande två frågor vilka detta avsnitt skall söka sammanfattningsvis besvara och diskutera: 
+\begin{enumerate}
+\item \textit{Vilka verktyg har projektgruppen använt sig av och hur har de fungerat i projektgruppens utvecklingsprocess?}
+\item \textit{Hur skulle verktygen och utvecklingsprocessen kunna förbättras?}
+\end{enumerate}
+\noindent
+De centrala verktygen i utvecklingsprocessen har varit fyra stycken. Webbapplikationen Trello är ett ordningsskapande verktyg som möjliggör skapandet av visuella tavlor som delas med andra gruppmedlemmar och på vilka man kan placera och flytta runt kort. Allt för att underlätta administrationen av utvecklingsarbetet.
+\\\\
+En enkät fylldes i av projektgruppen medlemmar med frågor om de olika verktygen som de använt i utvecklingsarbetet, om vilka problem som uppkommit och om det finns önskemål om andra funktioner i verktygen. Resultaten analyserades och man kan se att alla verktygen som de använt har fungerat, så till vida att projektgruppen har klarat av att utveckla den mjukvaran som var själva uppgiften och att de var ok att använda.
+\\\\
+Det har dock funnits saker som fungerat mindre bra och önskemål har framkommit om förbättringar. Även om flera av problemen löste sig i takt med att projektgruppens medlemmar blev duktigare på att hantera verktygen framkom flera önskemål för att arbetet ska flyta ännu smidigare i nästa projekt. En allmän lösning måste vara att hitta verktyg som fungerar bra och som man kan bli duktig på att använda, samt att gruppmedlemmarna är disciplinerade nog att alltid göra på rätt sätt.
+\\\\
+Kommunikation inom projektgruppen är viktig, dels för att alla ska känna sig delaktiga vilket leder till en bättre stämning inom gruppen, och dels för att arbetet ska vara effektivt. Att kommunikation fördes parallellt i både Slack och Trello resulterade i att gruppmedlemmar pratade förbi varandra och att missförstånd uppkom. De använde således inte verktygen optimalt. En lösning till detta hade varit om mer tydliga regler sattes om vad som skulle skrivas var. Samt om Trello hade haft ett bättre sätt att notifiera användare när de fått ett nytt meddelande på sitt kort.
+\\\\
+Ett önskemål gäller möjligheten att lättare se flödet i projektarbetet och helheten i projektet och var man ligger i processen. Det bör vara lättare att se vilka delar som bygger på varandra och i vilken ordning uppgifterna bör utföras. Översiktlighet hjälper alla att se var man är i projektet och hur man gör för att komma vidare. Trello var inte ett optimalt verktyg för detta. Det finns önskemål om att förbättra just den delen som visar flödesscheman och turordning för de enskilda uppgifterna inom projektet. Det skulle öka kunskapen om att veta var man står i projektet.
+\\\\
+Kunskap och skicklighet är viktigt. Git, som var central för projektgruppens mjukvaruutveckling, var svårt att hantera och de flesta problemen som framkommit har att göra med handhavandeproblem i det verktyget. Git uppfattades som svårt att lära sig och icke användarvänligt i och med att alla kommandon skedde via tangentbordet och inget via tavlor och klick. Samtliga i projektgruppen använde sig av terminalen för att utföra Git-kommandon. Inget grafiskt program användes alltså.
+\\\\
+Problemen minskade dock i takt med att projektgruppens medlemmar lärde sig hur det fungerade, men det framstår ändå som om verktyget var mindre användarvänligt och därmed onödigt svårt att använda. Enligt Donald A Normans bok \textit{The Design of Everyday Things} \cite{book:the-design-of-everyday-things} är dåligt anpassad design orsak till många fel och misstag när ett verktyg används. I boken nämns att många av de problem som anses vara mänskliga fel faktiskt beror på dålig design och användarvänlighet, alltså inte på människans tillkortakommanden. 
+\\\\
+Även Mattias Arvola tar i sin bok \textit{Interaktionsdesign och UX: om att skapa en god användarupplevelse} \cite{arvolaboken} upp den tröga inlärningskurvan för användandet av terminal istället för ett användargränssnitt. Kommandogränssnitten, som projektgruppen använde sig av för att utföra Git-kommandon är förvirrande och oförlåtliga för nybörjare jämfört med nyare gränssnitt och kräver mycket träning och inlärning av kommandon innan man kan utföra kommandon på ett effektivt sätt. 
+\\\\
+Det finns en stor förbättringspotential i ökad användarvänlighet, framförallt en variant av Git som inte bara är tangentbordsbaserad utan även har ett grafiskt användargränssnitt. Det skulle lösa många av problemen med tröghet och missförstånd och addera något positivt till arbetet. Ytterligare ett önskemål gäller möjlighet till validering och testning av kod inom Git.
+\\ \\
+Om WebStorms inbyggda gränssnitt för att utföra Git-kommandon hade använts istället för en   kommandotolk så hade antal olika program som använts blivit ett färre och Git hade använts med ett grafiskt gränssnitt. Detta hade troligen kunnat lösa några av de problem vi haft med Git. Om gruppen från början hade vetat vilka problem några av medlemmarna skulle ha med Git så hade detta högst troligt använts istället.
+
+\section{Slutsatser}
+\label{cha:jonathan-slutsatser}
+
+Projektgruppen har använt sig av verktygen Trello, Git, Slack och Webstorm. Det har gått bra att använda verktygen med undantag för Git där några gruppmedlemmar hade svårt att använda verktyget. Trots problem med Git så har utvecklingsprocessen fungerat bra. Små problem uppstod när man kunde kommunicera både på Trello och Slack.
+\\\\
+Problemen med Git hade troligen kunnat lösas med ett mer användarvänligt klientprogram. Här hade projektgruppen faktiskt tillgång till WebStorms inbyggda gränssnitt för Git som definitivt var ett bättre altarnativ, detta något som absolut skulle gjorts annorlunda. Utvecklingsprocessen hade kunnat förbättras genom att se till att medlemmarna tidigare kunde behärska ett Git-klientprogram. Ett program som hade funktionaliteten av Trello men möjlighet att göra kort beroende av varandra på ett tidsspann hade underlättat för att ge en överblick av projektet under utvecklingen. Regler om vad som ska kommuniceras skriftligt var bör även sättas upp tydligt.

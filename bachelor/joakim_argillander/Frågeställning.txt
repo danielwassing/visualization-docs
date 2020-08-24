@@ -1,0 +1,14 @@
+Agil vs vattenfallstestning av mjukvara
+
+
+Primary references (academic)
+
+http://ieeexplore.ieee.org/abstract/document/1342889/
+http://ieeexplore.ieee.org/abstract/document/1204378/
+http://ieeexplore.ieee.org/abstract/document/4293611/
+
+
+Secondary references (misc)
+
+http://www.allaboutagile.com/agile-testing-versus-waterfall-test-phases/
+	

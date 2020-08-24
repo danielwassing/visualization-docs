@@ -1,0 +1,144 @@
+\chapter{Kodgranskning som en kvalitetsmetod av Victor Bodin}
+\section{Introduktion}
+\label{sec:victor-introduction}
+Många fel inom mjukvaruutveckling kan missas av test. Detta kan vara fel i syntax, minnesläckor eller helt enkelt att man skrivit en funktion eller dylikt som kunde ha lösts med mindre eller mer lättförståelig kod. Dessa fel eller omskrivningar kan lätt hittas eller korrigeras om man får en ny synvinkel av en annan kodare. Därför är det viktigt att en grupp som utvecklar ett mjukvaruprojekt har en klar och införstådd process för hur granskning av kod ska ske.
+
+\subsection{Motivering}
+\label{sec:victor-motivation}
+
+Förutom att granskningen kan hitta fel eller se till att all kod är enhetligt skriven ger det granskaren förståelse för koden. Därmed kan även granskaren ha lärt sig något nytt och fått ett bättre helhetsperspektiv över mjukvaran. Det finns mycket olika data som visar vad kodgranskning har för påverkan på och under ett mjukvaruprojekt. Men den stora majoriteten av datan pekar på att i ett projekt som använder sig av kodgranskning minskar behovet av buggfix i ett senare skede, samt ökar applikationens kvalitet.\cite{review_expectations}\cite{review_foureyes}
+
+\subsection{Målsättning}
+\label{sec:victor-aim}
+
+Målsättningen är att genom att testa olika processer för kodgranskning få en överblick vilken process som är bäst anpassad för en projektgrupp där den som granskar oftast inte befinner sig på samma plats som personen som skrivit koden och feedback sker över internet. Denna processen ska användas för att säkerställa den slutgiltiga produktens kvalitet och underhållbarhet, samtidigt som den tidigt minskar antalet defekter.  
+
+\subsection{Frågeställningar}
+\label{sec:victor-research-questions}
+
+De frågeställningar som den här rapporten behandlar är:
+\begin{enumerate}
+\item Är kodgranskning en effektiv användning av projektgruppens tid?
+\item Hur kommer man fram till en kodgranskningsprocess i en nystartad projektgrupp?
+\item Vilken påverkan har kodgranskning på gruppens samarbete?
+\end{enumerate}
+
+\subsection{Avgränsningar}
+\label{sec:victor-delimitations}
+
+Studien kommer endast baseras på kandidatarbetet som utförs av
+grupp två i kursen TDDD96 på Linköpings universitet våren 2017. 
+
+\section{Teori}
+\label{sec:victor-theory}
+Här presenteras den teori som behövdes för framtagning av kodgranskningsprocessen.
+\subsection{Parprogrammering}
+Vid parprogrammering arbetar utvecklar två personer vid en dator. Den ena personen i paret är den som skriver koden, medan den andra personen diskuterar det som skrivs eller ska skrivas.\cite{website:smartbear} Parprogrammering var en hörnsten i projektgruppens utvecklingsprocess. Förutom de fördelar det medför ur utvecklingssynpunkt är det även en process som integrerar granskningsmomentet då den utvecklare som inte sitter vid tangentbordet just då kan koncentrera sig på att se till att det som utvecklas följer standarder som satts upp av gruppen. 
+\\ \\
+För att hjälpa projektmedlemmarna att arbeta utefter olika förutsättningar och för att arbeta i olika konstellationer togs beslutet att paren i parprogrammeringen skulle slumpas fram inför varje sprint. Detta för att två personer inte skulle arbeta tillsammans under flera sprinter. Mer om hur arbetet delades upp i sprinter finns att läsa om i avsnitt \ref{sec:scrum} om Scrum och avsnitt \ref{sec:scrum-work-methodology} om gruppens anpassning av Scrum.
+\subsection{Fjärrgranskning}
+Då gruppen oftast inte befann sig på samma plats under utvecklingen, förutom med den som de parprogrammerade tillsammans med, var fjärrgranskning ett självklart val. Enligt Smartbear görs en fjärrgranskning genom att ett e-mail med den kod som ska granskas skickas till den person som blivit uppskriven som granskare.\cite{website:smartbear} Eftersom att projektgruppen hade integrerat Trello med Slack som en kommunikationsväg, gör detta så att när en kodändring ändrar status från \textit{Pågående} till \textit{Behöver granskas} kommer en notis om det upp i Slack.\cite{website:slack}\cite{website:trello} När den notisen kommer är det öppet för en projektmedlem som har tid att granska den kodändringen. Projektgruppen valde att anpassa fjärrgranskningen på det sättet, eftersom att det redan fanns bestämda kommunikationsvägar på plats. Det går att läsa mer om gruppens användning av Slack och Trello i avsnitt\ref{sec:internal_communication}.
+
+\section{Metod}
+\label{cha:victor-method}
+För att ta fram kodgranskningsprocessen behövdes en metod för själva framtagningen. Det behövdes även data i form av enkäter och data från Trello och GitLab för att utvärdera metoden. Eftersom att utvecklingen under projektets gång sker enligt den agila utvecklingsmetoden Scrum, med vissa begränsningar och anpassningar där testning sker regelbundet, kommer kodgranskningen att göras i samband med att utvecklingen fortgår.
+\subsection{Metod för framtagning av arbetsflöde}
+Det finns tre olika metoder att granska kod enligt \textit{Best kept secrets of peer code review}\cite{website:smartbear} :
+\begin{itemize}
+\item \textit{Systematisk genomgång} - Granskaren går systematiskt igenom kodändringen.
+\item \textit{Punktlista} - Granskaren använder sig av en standardiserad punktlista som tagits fram med hjälp av erfarenhet från \textit{systematisk genomgång}.
+\item \textit{Användningsfall} - Granskaren får ett antal förutbestämda sätt som koden ska användas till och utvärderar koden utifrån dem.
+\end{itemize}
+Eftersom att koden testades med hjälp av testfall som skrevs på ett sätt som var snarlikt användarfall valdes den tekniken bort och kodgranskningsprocessen bestod av systematisk genomgång och en punktlista. 
+\subsection{Enkäter}
+För att se hur arbetet hade gått under sprinterna behövdes en utvärdering göras efter varje sprint. Ett sätt att utvärdera detta arbetet utifrån mjuka faktorer, den metod som användes för att ta reda på dem var med hjälp av enkäter. De mjuka faktorer som utvärderades i enkäterna var om kodgranskningen hade uppfattats som givande, att det var väl spenderad tid, hur feedbacken från granskningen hade framförts och om utvecklarna i projektet kände att det var något som fattades i processen. Enkäterna tog även upp hårdare faktorer som hur lång tid de har lagt på granskning. De frågor som ställdes på den första enkäten var:
+\begin{itemize}
+\item 1. Har du granskat någon kod under sprint X?
+\item 2. Hur mycket tid skulle du uppskatta att du lagt på kodgranskning?
+\item 3. Känner du att den tiden är väl spenderad? Om nej. Varför?
+\item 4. Om du har gett feedback/hittat fel i den kod du granskat, hur tog du upp det med den som skrivit den?
+\item 5. Känner du att det är något moment som fattas i granskning eller som skulle kunna förbättras?
+\end{itemize}
+\subsection{GitLab- och Trellodata}
+För att få mer data för att kunna utvärdera kodgranskningen användes data från GitLab och Trello för att se om en begäran om sammanfogning nekats på grund av något som hittats under granskningen. Från Trello kan man även se vilken feedback och kommentarer på koden som givits av granskaren.
+\section{Resultat}
+\label{sec:victor-results}
+Resulaten av granskningen från de olika sprinterna presenteras här. 
+\subsection{Sprint ett}
+Under sprint ett hade inte någon direkt process för hur granskningen av kod skulle gå till tagits fram. De flesta delar som behövdes för att skapa en granskningsprocess fanns att tillgå men de hade inte slagits ihop till en checklista som kunde följas då en granskning skulle genomföras, detta ledde till att granskningen skedde i blandad utsträckning.
+\subsection{Sprint två}
+Inför sprint två togs det upp att projektgruppen behövde en bestämd process och checklista för hur granskningar skulle gå till. I samarbete med utvecklingsledare och konfigurationsansvarig togs ett arbetsflöde fram och användes under sprint två.
+\\ \\
+Efter sprint två gjordes en enkät för att utvärdera granskningsarbetet och granskningsprocessen. Svaren från den enkäten finns att läsa i tabell \ref{tab:enkat_victor}. De mest framstående resultaten från enkäten var att bättre information om hur det skulle gå till behövdes, att inte alla deltagit i kodgranskningen och de som deltagit i granskningen hade spenderat olika mycket tid på att granska kod. Deltagandet sträckte sig från cirka 15 minuter till 2 timmar.
+\\ \\
+Resultaten från kommentarer i Trello delades upp i tre olika grupperingar; \textit{godkänd direkt}, \textit{funktionellt avslag} eller \textit{grafiskt avslag}. Dessa grupperingar berodde på hur de blivit bedömda då \textit{funktionellt avslag} betyder att kodändringen inte har den funktionalitet som var specificerad och \textit{visuellt avslag} betyder att kodändringen inte ser ut som prototyper eller tidigare diskussioner har specificerat. Under sprint två avklarades nio stycken Trello-kort som implementerade funktionalitet. Resultaten var:
+\begin{itemize}
+\item \textit{Godkända direkt} - 44\%
+\item \textit{Visuellt avslag} - 12\%
+\item \textit{Funktionellt avslag} - 44\%
+\end{itemize}
+\begin{table}[h!]
+  \centering
+  \caption{Svar från enkät om kodgranskning efter sprint två.}
+  \def\arraystretch{1.25}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | l | X | }
+      \hline
+      \textbf{Frågenummer} & \textbf{Svar} \\
+      \hline
+      1 & $\bullet$ Ja - \textit{57\%} \\
+        & $\bullet$ Nej - \textit{43\%} \\
+      \hline
+      2 & $\bullet$ 2 timmar \\
+        & $\bullet$ 30 minuter \\
+        & $\bullet$ Väldigt lite(ca 15 minuter) \\
+        & $\bullet$ 1,5-2 timmar \\
+      \hline
+      3 & $\bullet$ Ja - \textit{75\%}\\
+        & $\bullet$ Nej - \textit{25\%}\\
+        & Det finns ingen process för återkoppling och förbättring baserat på granskningen.\\
+      \hline
+      4 & $\bullet$ Jag tog upp det på slack men det slutade med att jag fixade det själv. \\
+      	& $\bullet$ Skrev som kommentar i trellokortet \textit{(två identiska svar)} \\
+      \hline
+      5 & $\bullet$ Främst en process för hur förbättring ska ske baserat på granskningen. \\
+        & $\bullet$ Att det ska budgeteras för det så att det blir av. Räcker med nån timme. \\
+        & $\bullet$ Nej. \\
+        & $\bullet$ Behöver ha bättre info om hur granskning ska gå till. \\
+        & $\bullet$ Vi hade kunnat ha en workshop för att man skulle känna sig bättre till mods i utförandet. \\
+        & $\bullet$ Mer strikt med att det ska göras. \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:enkat_victor}
+\end{table}
+\
+\subsection{Sprint tre}
+Sprint tre var en kort sprint eftersom att flertalet medlemmar i gruppen var antingen bortresta eller fokuserade sin tid på att klara av gamla tentor och att skriva på projektets dokumentation. Det utvecklingsarbete som genomfördes under denna sprint var istället begränsat till att finslipa den funktionalitet som redan fanns eller uppdatera det grafiska så att det överensstämde med de prototyper som gjorts. Granskningen i den här sprinten behövdes därför endast göras visuellt och inga avslag på de ändringar som gjordes uppkom.
+\subsection{Sprint fyra}
+Från enkäten i sprint två framkom det att en striktare och mer formell metod för granskningen behövdes eftersom att deltagandet var så spritt. Under sprint fyra togs det därför kontakt med de som inte hade granskat någon kod tidigare eller visste hur granskningsprocessen skulle gå till. Tillsammans med dem gicks granskningsprocessen igenom. 
+\\ \\
+Under sprint fyra gjordes tolv stycken Trello-kort som implementerade funktionalitet. Resultaten från de här korten var:
+\begin{itemize}
+\item \textit{Godkända direkt} -  50\%
+\item \textit{Visuellt avslag} - 17\%
+\item \textit{Funktionellt avslag} - 33\%
+\end{itemize}
+Efter sprint fyra gjordes ingen enkät eftersom att det var den sista officiella sprinten som gruppen genomförde. Men från Trello bekräftades det att alla i gruppen hade granskat kod.
+
+\section{Diskussion}
+\label{sec:victor-discussion}
+Här diskuteras de resultat som studien kommit fram till och metoden som använts. Det tas i hänsyn både hur kodgranskningsprocessen fungerat för gruppen samt hur den kunde ha förbättrats.
+\subsection{Resultat}
+I ett framtida projekt kan en workshop eller en genomgång för hela gruppen vara en bra aktivitet att ha. Det går att se från enkätsvaren eftersom flera önskade en genomgång om hur kodgranskningen skulle gå till. En annan aktivitet som kan tas till vara på är att införa schemalagda timmar eller sätta ett krav på timmar per vecka, detta så att alla i gruppen deltar i granskningsprocessen.
+\\ \\
+Eftersom det framkom i enkäten att Slack hade använts för att ta upp feedback kan vissa avslag ha missats i resultaten. Därför kan inte resultatet från den använda metoden täcka all feedback som givits.
+\subsection{Metod}
+Enkäten var en bra metod för att utvärdera hur gruppen använt sig av granskningsprocessen och hur mycket timmar de lagt, även om svaren är subjektiva så ger det ett sätt att forma arbetsflödet så att det passar gruppmedlemmarna. Enkäten kompletteras bra av objektiv data från Trello-korten eftersom där ser man vem som granskat vad och vilken feedback som givits.
+\section{Slutsatser}
+\label{cha:victor-conclusion}
+Då flertalet avslag gavs under granskningarna kan man dra slutsatsen att kodgranskningen är en effektiv användning av projektgruppens tid. Den funktionalitet som avslaget gjordes på hade i bästa fall hittats i ett senare skede i utvecklingen eller i värsta fall inte hittats överhuvudtaget. Ett fel som hittas i ett senare skede hade inneburit ett större antal arbetstimmar att lösa än om det hittats i ett tidigare skede, så även om tid har behövts avsättas för granskning har det sparat in tid senare under utvecklingen då felet med största sannolikhet hade legat djupare inbakat i applikationen.
+\\ \\
+För att komma fram till en fungerande kodgranskningsprocess behöver en nystartad grupp göra vissa misstag, men det viktiga är att ta erfarenhet från de här misstagen och inkludera den erfarenheten i sin kodgranskningsprocess. Att tidigt ta fram ett arbetsflöde för kodgranskning, även om flödet är enkelt, är ett bra steg för en nystartad grupp. Det ger tidigt något att arbeta utifrån och bygga på. En checklista är ett bra och enkelt verktyg att använda eftersom det ger granskaren en sorts mall att följa under granskningstillfället.
+\\ \\
+Samarbetet ökar genom kodgranskning genom att om något i koden inte stämmer överens med de satta standarderna kräver det att en diskussion måste inledas mellan granskaren den personen eller de personerna som skrivit koden. Det leder till att gruppmedlemmarna lärde sig diskutera kod med varandra och således ökar samarbetet mellan dem. Även parprogrammering ökar samarbetet mellan gruppmedlemmar eftersom det kräver att två personer arbetar tillsammans och lär sig varandras styrkor och svagheter.

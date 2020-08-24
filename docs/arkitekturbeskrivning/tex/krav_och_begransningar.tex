@@ -1,0 +1,13 @@
+\section{Krav och begränsningar}
+Följande beskriver de funktionella krav och prestandakrav från kravspecifikationen, samt de begränsningar som påverkar applikationens arkitektur.
+\subsection{Krav på arkitekturen}
+Kraven är numrerade efter projektets kravspecifikation och är ett urval baserat på de krav som påverkar utformningen av arkitekturen.
+\begin{itemize}
+  \item K3 - Applikationen ska kunna visa en graf med noder som representerar aggregerade händelser
+  \item K14 - Användaren ska kunna välja en nod i den aggregerade grafen och presenteras med en detaljerad samling av händelser som noden representerar, motsvarande nivå 2.
+  \item K16 - Användaren ska kunna välja händelser i den detaljerade samlingen och presenteras med en graf som representerar dess händelseförlopp, motsvarande nivå 3.
+\end{itemize}
+\ \\
+Krav K3 behandlar det grundläggande i applikationens funktionella krav. Applikationen ska kunna hämta, filtrera och visualisera data. Data ska kunna aggregeras och vara representerat som noder i en graf. Krav K14 säger att de noderna från krav K3 ska kunna presenteras som en detaljerad lista. Krav K16 menar att de detaljerade händelserna i noderna från krav K3 ska individuellt kunna presenteras som en graf.
+\subsection{Begränsningar}
+Applikationen baseras på ramverket Meteor som exekverar JavaScript. JavaScript kan endast exekveras i en kärna vilket påverkar skalbarheten.\cite{javascriptsinglethread}

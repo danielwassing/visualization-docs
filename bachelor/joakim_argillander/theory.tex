@@ -1,0 +1,58 @@
+%%% lorem.tex --- 
+%% 
+%% Filename: lorem.tex
+%% Description: 
+%% Author: Ola Leifler
+%% Maintainer: 
+%% Created: Wed Nov 10 09:59:23 2010 (CET)
+%% Version: $Id$
+%% Version: 
+%% Last-Updated: Tue Oct  4 11:58:17 2016 (+0200)
+%%           By: Ola Leifler
+%%     Update #: 7
+%% URL: 
+%% Keywords: 
+%% Compatibility: 
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Commentary: 
+%% 
+%% 
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Change log:
+%% 
+%% 
+%% RCS $Log$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Code:
+
+\chapter{Teori}
+\label{cha:theory}
+
+En metod att kvalitetssäkra mjukvara gentemot utvecklingsprojektets intressenter är mjukvarutestning. Mjukvarutestning innebär en objektiv utvärdering av en mjukvaras kvaliteter och undersökning huruvida produkten når uppställda krav på dessa. Genom en serie av olika tester, såsom 
+\begin{itemize}
+\item \textbf{Enhetstester} - där individuella kodstycken testas utifrån dess ämmade funktionalitet. Dessa tester kan både vara automatiska och manuella, och testar det som kan anses vara en mjukvaras minsta testbara beståndsdel. Ingenjörssammanslutningen IEEE värderar både automatiska och manuella enhetstester likvärdigt. Vid testdriven utveckling konstrueras enhetstester först för hela funktionaliteten. Naturligt så misslyckas alla dessa tester initialt för att sedan inkrementellt lyckas vartefter utvecklingen fortskrider. Enhetstestet kan ses som ett strikt kontrakt som koden måste uppfylla, och bidrar genom detta till självdokumentation av källkoden. 
+\item \textbf{Integrationstester} - testning av sammansättning och integration av olika kodmoduler, vilka kan ses som de byggblock som utgör det kompletta systemet. Syftet är att undersöka att olika subsystem fungerar tillsammans med varandra i större aggregationer. Detta säkerställer att gränssnitten mellan moduler fungerar och bildar ett enhetligt system eller subsystem, beroende på abstraktionsnivå. Denna typ av testning görs vanligtvis efter enhetstester och funktionstester utförts.
+\item \textbf{Funktionstester} - syftar till att testa en viss funktionalitet i ett mjukvarusystem. Med detta menas att varje utvecklad funktionalitet utvärderas och testas. Enligt ingenjörssammanslutningen IEEE rekommenderas inte att en given funktionalitet inte också testas av samma utvecklare som bidragit till att utveckla den. Detta för att kunna garantera ett objektivt testningsförfarande. 
+\item \textbf{Användbarhetstest} - används för att utvärdera systemets tillsammans med dess tänkta användare. Denna typ av testning är ovärdelig för att få information om hur systemet fungerar i dess tänkta användningsmiljö. Vanligtvis låter man slutanvändare använda mjukvarusystemet genom scenarier och situationer där användaren löser ett problem och observatörer noterar om användarens interaktionssteg motsvarar de förväntade. Utifrån detta utvärderas systemets intuitivitet, användarvänlighet och användbarhet. 
+\item \textbf{Regressionstest} - är en iterativ typ av test som används för att säkerställa att tidigare utvecklad kod och funktionalitet fortfarande fungerar. Denna typ av testning sker med jämna mellanrum och visar på om en funktionalitet som implementerats och klarat både enhetstest och funktionstest resulterar i att hela bygget havererar efter att den givna funktioanliteten implementerats. 
+\item \textbf{Installationstest} - testar huruvida systemet kan installeras, avinstalleras, och uppgraderas hos slutkunden. Detta kan vara en del av acceptanstestning och involverar testning av proceduerer för installation på slutkunds plattform.
+\end{itemize}
+
+verifieras att produkten i form av mjukvaran fungerar på det sätt som utlovats i kravspecifikationen i den användningsmiljö som den utformats att fungera i. Utöver de nämnda typer av test så finns det ett oräknerligt antal andra testtyper som alla betraktar olika mjukvarukvaliteter och ämmar till att testa dessa på ett objektivt, vetenskapligt sätt. Olika projekt använder sig av olika metoder för att genomföra mjukvarutestningen, då det finns praktiskt taget oändligt med kvaliteter att utvärdera. \\
+\\
+För att konkretisera testningsförfarandet formuleras ofta så kallade testfall som beskriver vad som testas, och det förväntade utfallet, samt de steg som testpersonen, eller ett automatiserat testramverk, ska utför för att utföra testet. I kapitlet \emph{Metod} behandlas hur testning kan utföras i ett småskaligt mjukvaruprojekt.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% lorem.tex ends here
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "demothesis"
+%%% End: 

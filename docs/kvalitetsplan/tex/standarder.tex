@@ -1,0 +1,77 @@
+\section{Standarder}
+%Skriva om kodstandard, dokumentstandard, testningsstandard
+De standarder som dokumenten är skriva utifrån finns uppradade i Tabell\ref{tab:tabell2}.
+\begin{table}
+\begin{center}
+\caption{Standarder för de dokument som skrivs.}
+\begin{tabular}{| l | l |}
+\hline
+Projektplan: & Utifrån kursstandard för kursen TDDC88\footnote{}\\
+\hline
+Kravspecifikation: & IEEE std 830\\
+\hline
+Kvalitetsplan: & IEEE std 730\\
+\hline
+Testplan och testrapport: & IEEE std std 829\\
+\hline
+Arkitekturbeskrivning: & OpenUP Architectural notebook\\
+\hline
+\label{tab:tabell2}
+\end{tabular}
+\end{center}
+\end{table}
+\footnotetext{Sida 29 på https://www.ida.liu.se/~TDDC88/theory/04project-management.pdf}
+De resterande dokumenten som nämns under rubriken Dokumentation men inte har någon standard är interna dokument som skrivit utifrån den ansvariges tidigare erfarenhet. Den person som har rollen som har det ansvarsområdet som dokumentet täcker är ansvarig för respektive dokument, till exempel kvalitetssamordnare är ansvarig för kvalitetsplanen. För mer information om de olika rollerna se rubriken Organisation i dokuemntet Projektplan.
+\\ \\
+Teststandard specificeras i dokumentet Testplan. I underrubrikerna Dokumentationsstandard och Kodstandard presenteras motsvarande standard.
+\subsection{Dokumentationsstandard}
+Dokumentationsstandarden är framtagen av projektgruppen.
+\subsubsection{Språk}
+Alla dokument är skrivna på svenska. Engelska ord som inte har en svenska motsvarighet eller behöver förklaras ska finnas med i dokumentets ordlista. Possesiva pronomen såsom vår eller min används ej. Vi refererar till produkten som  \textit{applikationen} och till arbetet som \textit{projektet}. Förkortningar ska användas konsekvent, om de används, och då skriva med punkter; \textit{t.ex.} och inte \textit{t ex}.
+\subsubsection{Text}
+För att göra ett nytt stycke ska det vara en tom rad efter slutet på ett nytt stycke, första raden på ett nytt stycke ska alltså inte vara indragen.
+\subsubsection{Tabeller}
+Tabelltexter ska finnas och de ska skrivas i hela meningar med versal, punkt och i fet stil. Tabelltexten ska vara orienterad ovanför tabellen.
+\subsubsection{Figurer}
+Likt tabeller så ska en figurtext finnas, men den ska vara orienterad under sin figur.
+\subsection{Kodstandard}
+Likt dokumentationsstandarden är kodstandarden framtagen av projektgruppen.
+\subsubsection{Allmänt}
+JavaScript kan ha avvikande beteenden därför skrivs \textit{use strict} högst upp i samtliga .js-filer, då kommer interpretatorn kasta undantag istället för att ge oönskat beteende.\\ \\
+För indentering används fyra stycken mellanslag och inget annat. \\ \\
+Globala variabler ska undvikas till varje pris, de inför tillstånd som ger upphov till svårlösta buggar. Ju färre tillstånd, desto lättbegripligare kod. \\ \\
+Ifall ett element hittas i DOM:en ska det sparas till en variabel så att scriptet inte behöver söka upp elementet flera gånger. \\ \\
+Eftersom \textit{==} utför en så kallad type coercion, alltså om objekten som jämförs är olika görs de om till samma sort eller likande objekt och jämförs. Detta kan leda till oönskat beteende, därför används istället \textit{===} eftersom detta endast jämför dokument av samma objekt.
+\subsubsection{Stilkonventioner}
+Stilkonventionerna har tagits fram så att all kod ska vara enhetlig. \\
+Variabler och funktioner användar camelCase vid namngivning, medan klasser använder PascalCase.\\ \\
+For-looper undviks i den utsträckning det går, de erstätts med fördel av \textit{.forEach()}, \textit{.map()} eller liknande funktioner för att undivka strul med indexvariabler och för att ge en mer lättläslig kod.\\ \\
+If-satser skrivs på formen:\\
+\begin{center}
+\begin{tabular}{l}
+if(someCondition)\{\\
+\ \ \ \ someStatement();\\
+\}\\
+\end{tabular}
+\end{center}
+Funktioner skrivs på formen:\\
+\begin{center}
+\begin{tabular}{l}
+function someFunc()\{\\
+\ \ \ \ someStatement();\\
+\}\\
+\end{tabular}
+\end{center}
+Klasser skrivs på formen:\\
+\begin{center}
+\begin{tabular}{l}
+function Cat(name)\{\\
+\ \ \ \ this.name = name;\\
+\ \ \ \ this.talk = function()\{\\
+\begin{tabular}{l}
+\ \ \ \ \ \ \ \ console.log(this.name);\\
+\end{tabular}\\
+\ \ \ \ \};\\
+\}\\
+\end{tabular}
+\end{center}

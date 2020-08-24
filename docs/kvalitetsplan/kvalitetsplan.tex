@@ -1,0 +1,96 @@
+\documentclass[titlepage, a4paper]{article}
+\input{../mall/layout.tex}
+
+%parametrar som behövs för layout
+\newcommand{\LAYOUTredaktor}{Victor Bodin}
+\newcommand{\LAYOUTversion}{1.1}
+\newcommand{\LAYOUTdokument}{Kvalitetsplan}
+\newcommand{\LAYOUTdokumenttyp}{Kvalitetsplan}
+\newcommand{\LAYOUTgranskatdatum}{}
+\newcommand{\LAYOUTgranskare}{}
+\newcommand{\LAYOUTgodkannare}{}
+\newcommand{\LAYOUTgodkantdatum}{}
+\newcommand{\LAYOUTkursnamn}{TDDD96}
+\newcommand{\LAYOUTprojektnamn}{Visualization}
+\newcommand{\LAYOUTprojektgrupp}{Grupp 2}
+\newcommand{\LAYOUTartaltermin}{VT 2017}
+\newcommand{\LAYOUTgrupphemsida}{https://gitlab.ida.liu.se/tddd96/visualization}
+\newcommand{\LAYOUTkund}{Kristian Sandahl}
+\newcommand{\LAYOUTkundkontakt}{Kristian Sandahl}
+\newcommand{\LAYOUTkursansvarig}{Kristian Sandahl}
+\newcommand{\LAYOUThandledare}{Lena Buffoni}
+
+%override paket för detta doc.
+\usepackage[swedish]{babel}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{biblatex}
+\addbibresource{../mall/references.bib}
+
+\usetikzlibrary{shapes, arrows}
+
+\pagenumbering{roman}
+\graphicspath{ {../../images/} }
+\DeclareGraphicsRule{.0.pdf}{pdf}{*}{}
+\begin{document}
+
+\LAYOUTtitelsida
+
+\begin{LAYOUTprojektidentitet}
+\LAYOUTgruppmedlem{Johan Nåtoft}{Teamledare}{070-7661443}{johna702@student.liu.se}
+\LAYOUTgruppmedlem{Joakim Argillander}{Testledare}{076-8618641}{joaar286@student.liu.se}
+\LAYOUTgruppmedlem{Victor Bodin}{Kvalitetssamordnare}{073-5183199}{vicbo282@student.liu.se}
+\LAYOUTgruppmedlem{Sebastian Callh}{Utvecklingsledare}{073-8204664}{sebca553@student.liu.se}
+\LAYOUTgruppmedlem{Rebecca Lindblom}{Analysansvarig}{073-4364079}{rebli156@student.liu.se}
+\LAYOUTgruppmedlem{Johan Thornström}{Arkitekt}{070-5297445}{johth918@student.liu.se}
+\LAYOUTgruppmedlem{Jonathan Wahlund}{Konfigurationsansvarig}{070-6106911}{johwa732@student.liu.se}
+\LAYOUTgruppmedlem{Daniel Wassing}{Dokumentansvarig}{076-7741110}{danwa223@student.liu.se}
+% lägg till fler här
+\end{LAYOUTprojektidentitet}
+
+\newpage
+\tableofcontents	%Innehållsförteckning
+
+\begin{LAYOUTdokumenthistorik}
+\LAYOUTversionsinfo{0.1}{2017-01-25}{Första utkast}{Daniel Wassing}{Victor Bodin}
+\LAYOUTversionsinfo{0.2}{2017-01-30}{La till alla kapitel}{Victor Bodin}{Joakim Argillander}
+\LAYOUTversionsinfo{1.0}{2017-02-20}{Första version till inlämmning 1}{Victor Bodin}{Joakim Argillander}
+\LAYOUTversionsinfo{1.1}{2017-03-06}{Ändringar till inlämmning 2}{Victor Bodin}{Joakim Argillander}
+\end{LAYOUTdokumenthistorik}
+
+\newpage
+\pagenumbering{arabic} %Påbörja sidnumrering
+
+%inputs go here
+% Föreläsning om IEEE std 730:
+% http://profs.etsmtl.ca/claporte/English/Enseignement/CMU_SQA/Notes/Plan/IEEE_Std_730_SQA_Plans.pdf
+
+\input{tex/syfte} %Purpose
+\newpage
+\input{tex/referensdokument} %Referenced document
+\newpage
+\input{tex/organisation}  %Management
+\newpage
+\input{tex/dokumentation} %Documentation
+\newpage
+\input{tex/standarder} %Standars,practices and conventions
+\newpage
+\input{tex/tester} %Test
+\newpage
+\input{tex/granskningar} %Software and document reviews
+\newpage
+\input{tex/problemrapportering} %Problem reporting and corrective action
+\newpage
+\input{tex/verktyg} %Tools,techniques and methodologies
+\newpage
+\input{tex/leverantor} %Supplier control(demos)
+\newpage
+\input{tex/utbildning} %Training
+\newpage
+\input{tex/riskhantering} %Risk management
+
+\clearpage
+\printbibliography
+
+\end{document}

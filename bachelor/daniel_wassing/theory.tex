@@ -1,0 +1,121 @@
+%%% lorem.tex --- 
+%% 
+%% Filename: lorem.tex
+%% Description: 
+%% Author: Ola Leifler
+%% Maintainer: 
+%% Created: Wed Nov 10 09:59:23 2010 (CET)
+%% Version: $Id$
+%% Version: 
+%% Last-Updated: Tue Oct  4 11:58:17 2016 (+0200)
+%%           By: Ola Leifler
+%%     Update #: 7
+%% URL: 
+%% Keywords: 
+%% Compatibility: 
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Commentary: 
+%% 
+%% 
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Change log:
+%% 
+%% 
+%% RCS $Log$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Code:
+
+\chapter{Teori}
+\label{cha:theory}
+De fakta som presenteras i denna rapport är hämtade från \textit{Documentation in System Development: A significant Criterion for Project Success} \cite{docsystemdev}, \textit{Collaborating with ShareLaTeX and git} \cite{website:sharelatex_with_git} samt \textit{How SciGit and other collaborative editing/version control services are different} \cite{website:scigit_blog}. \\
+Fakta presenteras även från intervjuer som har skett under projektets gång.
+\\ \\
+Nedan presenteras ett flertal av de olika verktyg som tillfrågade personer från olika grupper har använt sig av. Dessa verktyg är de som kommer att behandlas i denna rapport.
+
+\section{LaTeX}
+\LaTeX (Lamport TeX) är ett s.k. \textit{märkspråk}\footnote{Märkspråk är mer känt som Markup Language på engelska} för att producera dokument, precis som \textit{HTML}\footnote{HTML är en förkortning av HyperText Markup Language} är ett märkspråk för webbprogrammering. \\
+LaTeX skapades av \textbf{Leslie Lamport}. Den senaste versionen heter LaTeX2e och släpptes 1994, med mindre uppgraderingar som släpps ungefär varje halvår.
+\\ \\
+LaTeX bygger på typsättningssystemet \textit{TeX} som utvecklades av \textbf{Donald Knuth} under 1970 och 1980-talet \cite{the_tex_book}. Språkdefinitionen blev fastställd under 1985.
+\\ \\
+LaTeX används i dag främst i vetenskapliga kretsar, framför allt inom områdena matematik, fysik och datavetenskap. Det omfattar dokumentstilar för artiklar, böcker, brev, presentationer med mera samt stöd för referenser och automatisk numrering av avsnitt och ekvationer. LaTeX är förmodligen det vanligaste sättet att utnyttja grundprogrammet TeX då det finns väldigt mycket funktionalitet färdig från början, utan att man behöver importera och/eller använda annan mjukvara. LaTeX kan generera en mängd dokumentformat, den vanligaste är PDF.
+
+\section{Git}
+\label{sec:wassing-git}
+\textit{Git} \cite{website:git} är ett versionshanteringsprogram \cite{website:git_version_control} som skapades 2005 av \textbf{Linus Torvalds} för att hantera källkod till Linuxkärnan\footnote{Linux är ett operativsystem som Linus Torvalds publicerade 1991}. Git kan jämföras med \textit{CVS} eller \textit{Subversion} som också är versionshanteringssystem. Till skillnad från de andra två är däremot Git de-centraliserat \cite{website:centralized_version_control}, vilket betyder att det inte finns ett mäster-arkiv som alltid har den senaste versionen av ändringar. CVS och Subversion tas ej upp här då ingen tillfrågad grupp har använt sig av de systemen.
+\\ \\
+Git är främst tänkt för filer med oformatterad text, men har på senare tid fått utökad support för binära filer såsom Microsoft Word dokument. Detta kräver dock plugins som ofta bara konverterar binära filer till oformatterad text. \cite{website:using_git_with_word} Användandet av olika plugins gör ofta att Git inte är ett alternativ när man jobbar med binära filer. Mer om det i avsnitt \ref{cha:wassing-discussion}.
+
+\section{Google Drive}
+\textit{Google Drive} \cite{website:googledrive}, även tidigare känt som \textit{Google Docs}, är en molntjänst som tillhandahålles konstnadsfritt av Google. Google Drive ses ofta som Googles motsvarighet till Microsofts Officepaket (som inkluderar bland annat Word). Genom Google Drives molntjänst så kan användare redigera i samma dokument samtidigt. Dessutom kan även andra filer laddas upp och delas. Google Drive kräver en internetanslutning för att användare ska kunna komma åt dokumenten, men är i övrigt helt oberoende av mjukvara. Det finns möjlighet att exportera dokument som skrivs i Google Drive till andra format, bland annat PDF.
+
+\section{ShareLaTeX}
+\textit{ShareLaTeX} \cite{website:sharelatex} kan liknas vid Google Drive, fast med att skriva dokument i LaTeX som huvudfunktion. ShareLaTeX  är likt Google Drive plattformsoberoende och exekverar direkt i webbläsaren. Det finns en enorm support för olika LaTeX och TeX bibliotek och plugins, vilka alla kan kallas på direkt i dokumenten när man skriver online utan att vidare arbete behöver utföras. ShareLaTeX har även ett begränsat stöd för att arbeta med Git sedan hösten 2015.
+\\ \\
+Likt LaTeX så används ShareLaTeX primärt för att skapa PDF-filer av hög kvalitet.
+
+\section{Microsoft Office}
+\textit{Microsoft Office} är en paketlösning från Microsoft som innehåller de populära prorammen Word, Excel och Powerpoint med flera. Officepaketet är en köpvara, men studenter på LIU kan få det gratis genom Lisam \cite{website:liu_office_package}. Word tillåter skapandet av högteknologiska dokument genom ett stort antal funktioner. Word har däremot ingen inbyggd delningsfunktion, vilket gör att inte mer än en person åt gången kan jobba med ett dokument.
+\\ \\
+I senare versioner av Office så finns det även möjligheten att exportera till andra filformat än de typiska som mjukvara i Office använder sig av (.doc, .xls och .ppt). Microsoft Office är fortfarande industriell standard. Det erbjuds fortfarande utbildning i Microsoft Office i elementära skolår och gymnasiet än i dag.
+
+%The main purpose of this chapter is to make it obvious for
+%the reader that the report authors have made an effort to read
+%up on related research and other information of relevance for
+%the research questions. It is a question of trust. Can I as a
+%reader rely on what the authors are saying? If it is obvious
+%that the authors know the topic area well and clearly present
+%their lessons learned, it raises the perceived quality of the
+%entire report.
+
+%After having read the theory chapter it shall be obvious for
+%the reader that the research questions are both well
+%formulated and relevant.
+
+%The chapter must contain theory of use for the intended
+%study, both in terms of technique and method. If a final thesis
+%project is about the development of a new search engine for
+%a certain application domain, the theory must bring up related
+%work on search algorithms and related techniques, but also
+%methods for evaluating search engines, including
+%performance measures such as precision, accuracy and
+%recall.
+
+%The chapter shall be structured thematically, not per author.
+%A good approach to making a review of scientific literature
+%is to use \emph{Google Scholar} (which also has the useful function
+%\emph{Cite}). By iterating between searching for articles and reading
+%abstracts to find new terms to guide further searches, it is
+%fairly straight forward to locate good and relevant
+%information, such as \cite{test}.
+
+%Having found a relevant article one can use the function for
+%viewing other articles that have cited this particular article,
+%and also go through the article’s own reference list. Among
+%these articles on can often find other interesting articles and
+%thus proceed further.
+
+%It can also be a good idea to consider which sources seem
+%most relevant for the problem area at hand. Are there any
+%special conference or journal that often occurs one can search
+%in more detail in lists of published articles from these venues
+%in particular. One can also search for the web sites of
+%important authors and investigate what they have published
+%in general.
+
+%This chapter is called either \emph{Theory, Related Work}, or
+%\emph{Related Research}. Check with your supervisor.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% lorem.tex ends here
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "demothesis"
+%%% End: 

@@ -1,0 +1,39 @@
+\section{Kriterier för godkänd/misslyckat test}
+För att ett test ska anses vara godkänt så måste det uppfylla testpåståendet enligt nedanstående standard för hur testfall och testpåståenden formuleras.
+\subsection*{Testfall}
+\textbf{TestID:} \textit{Unik identifierare. Varje testfalls ID är på formen Tx där x är ett löpnummer börjandes på 1.}\\
+\textbf{Påstående:} \textit{Vad som ska verifieras. Se nedan (Formulering av testpåstående).}\\
+\textbf{Antaganden:} \textit{De antaganden som understödjer testfallet.}\\
+\textbf{Testdata: } \textit{Variabler och värden som testas.}\\
+\textbf{Teststeg: } \textit{Arbetsgång för testet.}\\
+\textbf{Förväntat resultat: } \\
+\textbf{Uppnått resultat: } \textit{Vad resulterade testet i.}\\
+\textbf{Godkänt/Underkänt test:} \textit{Huruvida testet godkändes eller ej.}\\
+\textbf{Kommentarer:} 
+\subsection*{Testpåstående}
+För att formulera vad som ska verifieras används följande format: \\
+\\
+\textbf{Verifiera ...} \\
+\textbf{... genom att använda ...} [verktyg, dialog] \\
+\textbf{... med ...} [förutsättningar] \\
+\textbf{... att ...} [vad som returneras, visas eller demonstreras]
+\\ \\
+För att testet ska betraktas som godkänt ska testet uppfylla följande kriterier:
+\begin{itemize}
+\item Testpåståendet är uppfyllt
+\item Inga ytterligare antaganden är gjorda
+\item Testdata har hämtats in
+\item Teststegen har följts vid utförandet av testet
+\item Det förväntade resultet har uppnåtts eller överträffats
+\end{itemize}
+
+\subsection*{Exempel}
+\textbf{TestID:} T01\\
+\textbf{Påstående:} Verifiera genom tidtagning med ramverkets tidtagninsfunktionalitet att hemsidan läses in på under två millisekunder. \\
+\textbf{Antaganden:} Webbläsarens cacheminne är rensat. \\
+\textbf{Testdata:} Uppmätt tid \\
+\textbf{Teststeg:} Starta tidtagning, läs in hemsidan, läs av inläsningstiden. \\
+\textbf{Förväntat resultat: } Hemsidans inläsningstid understiger två millisekunder. \\
+\textbf{Uppnått resultat:} Hemsidan inläsningstid var en millisekund.\\
+\textbf{Godkänd/Underkänt test: } GODKÄNT \\
+\textbf{Kommentarer:} Testet är allmängiltigt för alla marknadsledande webbläsare. 

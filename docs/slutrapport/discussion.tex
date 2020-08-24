@@ -1,0 +1,134 @@
+\chapter{Diskussion}
+\label{cha:discussion}	
+Detta avsnitt ämnar att ta upp olika delar av rapporten. Rapportens resultat och metod behandlas och eventuella möjliga förändringar diskuteras. Arbetet sätts in i ett större sammanhang och etiska, samhälleliga och miljömässiga aspekter diskuteras. Avslutningsvis redovisas de slutsatser som kan dras gällande de presenterade frågeställningarna.
+
+\section{Resultat}
+\label{sec:discussion-results}
+För att kunden ska få ut fullt värde av produkten hade det krävts att fortsätta utvecklingscykeln med ytterligare några iterationer, där man involverar kund ännu mer för att tillsammans arbeta fram den slutgiltiga applikationen. Även att ytterligare involvera Eiffel-utvecklare och användare av KI-system hade krävts för att tillföra ytterligare värde till produkten. Inom ramen för det utförda projektet finns inget annat som kan tillföras för att kunden ska kunna få ut fullt värde av produkten, däremot finns det möjligheter att delta i forskningsprocessen där applikationen vidareutvecklas till en slutgiltig produkt i samarbete med slutanvändare och övriga intressenter. \\
+\\
+Den resulterande applikationen är en stor förbättring från den övertagna kodbasen som projektet utgick ifrån. Applikationen har utvecklats till en leveransbar produkt som tjänar sitt syfte som forskningsprototyp och innehåller all, av kund, önskad funktionalitet.
+
+\subsection{Systemanatomi}
+Den systemanatomi som togs fram kan ses i figur \ref{fig:systemanatomi}. Det enda kravet som fanns för att ta fram en systemanatomi var att en kravspecifikation hade tagits fram tillsammans med kund, eftersom en systemanatomi bara beskriver de relationer och funktionaliteter applikationen förväntas ha. En tydlig fördel av att en systemanatomi togs fram är att det blev tydligare vad applikationens funktionalitet var. De individuella funktionerna kunde därmed bli uppdelade i moduler vilket var ett mål med arkitekturen. Det blev även tydligt hur arkitekturen kunde delas upp när den servernära funktionaliteten hamnade långt ner i figuren medan de användarnära funktionaliteterna låg högst upp.
+
+\subsection{Backend i Java}
+Tidigt under projektets gång undersökte gruppen applikationens behov och lämnade in ett förlag till kund om en tänkbar ändring. Den givna koden skulle kunna skrivas om till en ren klient/server-applikation med en server i Java och en klient i JavaScript. Det fanns rum för förbättring och en omskrivning av server till Java med en förbättrad datastruktur och databehandling skulle öka prestandan avsevärt. Meteor har en nästan ickeexisterande separation av klient och server vilket gör att ramverkets abstraktion kan göra det problematiskt att göra en enkelt strukturerad kod med bra läsbarhet. Eftersom den kod som skrivs ska ha bra läsbarhet så att inlärningsprocessen för alla i gruppen ska vara så pass kort som möjligt. Dessutom gör det lätt för en utomstående att sätta sig in i koden för eventuell vidareutveckling. 
+\\ \\
+Kunden rekommenderade att projektet skulle fortsätta använda Meteor eftersom de flesta av förändringarna som vi ville göra kan implementeras inom ramverket. Därmed beslutade gruppen att fortsätta med Meteor men att det skulle omstruktureras för att kunna öka kodens läsbarhet.
+
+\subsection{Användargränssnitt}
+Ett alternativ till detta hade varit att utveckla egna gränssnittskomponenter, men detta hade förmodligen tagit mycket tid i anspråk, men framförallt finns en risk att användarupplevelsen hade skadats av detta. Då Bootstrap är ett så pass populärt ramverk som används över stora delar av befintliga webbapplikationer finns det många handlingsinviter som användaren kan känna igen och intuitivt veta hur man interagerar med applikationen. Användaren vet redan hur de olika gränssnittskomponenterna fungerar och vad som kan förväntas hända vid interaktion med dessa.\cite{arvolaboken} Risken med att utveckla egna lösningar är att gå miste om detta. Ytterligare en fördel med att använda det färdiga ramverket är att applikationens gränssnitt får ett mycket mer enhetligt utseende och blir mer visuellt tilltalande. Ytterligare en fördel med att använda Bootstrap är att ramverket innehåller funktionalitet för att göra applikationen responsiv vilket, trots att applikationen i sin nuvarande form inte är utvecklad för handhållna enheter, gör det lättare att vidareutveckla den för att stödja mindre skärmar.\\
+\\
+Det finns många andra likvärdiga ramverk, men Bootstrap har många fördelar som kommer naturligt av att vara det marknadsledande alternativet. Det finns många insticksmoduler, mycket guider och dokumentation för hur ramverket kan implementeras. Detta, samt att projektgruppen hade tidigare erfarenhet av ramverket, var de huvudsakliga anledningarna till att ramverket valdes.\\
+\\
+Användargränssnittet där graferna är staplade ovanpå varandra var någonting som önskades av kunden. Ett alternativ till detta hade varit att låta varje graf visas en i taget, antingen på egen sida eller genom att renderas på samma plats som den föregående. Projektgruppen inledde utvecklingen mot detta, men efter diskussion med kunden fastslogs att applikationen skulle bli mer överskådlig om alla grafer kunde nås från samma vy.
+\section{Metod}
+\label{sec:discussion-method}
+Metoderna som användes för att besvara frågeställningarna kan ha brister. Metoderna som analyseras här är gruppens struktur, möten, dokumentationsmetoden, utvecklingsmetoden och prototypning.
+
+\subsection{Gruppens struktur}
+Projektgruppens struktur har varit en bra grund att stå på och har underlättat vid utdelning av arbetsuppgifter. Att ha tydliga personliga ansvarsområden har visat sig vara produktivt för gruppen. Även om ansvaret för enskilda delar har varit uppdelat så har arbetet många gånger varit rollöverskridande.
+\\ \\
+Det fanns tillfällen då vissa roller egentligen borde bytts mellan medlemmarna eftersom de inte kände sig bekväma med de valda rollerna. Det skedde dock aldrig då projektet redan var långt gånget. Istället fokuserade gruppen på att stötta de medlemmar som kände sig osäkra för att se till att arbetet blev väl utfört. Detta gick ut över andra medlemmars arbetstid men det ansågs vara bättre än att lära upp medlemmar i andras roller från grunden. 
+
+\subsection{Möten}
+De möten som gruppen hade internt och med handledare ansågs vara ineffektiva i början. Under förstudien skedde inga Scrum-möten då inte utveckling hade påbörjats. Det var en bidragande faktor till att det blev fler gruppmöten som sågs som bortkastad tid då inte alla behövde veta allt som sades, eller vara inblandade i varje diskussion. Efter ett tag stod det klart att mötena behövde bli effektivare, vilket uppnåddes på flera sätt. Riktlinjer för hur enskilda medlemmar skulle förhålla sig vid diskussion introducerades och gruppmötena minskade i omfång. Vid handledarmöten så begränsades diskussionen till kommentarerna som gruppen fått av handledaren. Detta upplevdes som väldigt positivt och mötena som hölls efter förändringarna blev både effektivare och trevligare för hela gruppen. De Scrum-möten som hölls varje arbetsdag som komplement till dessa traditionella mötena höll alla i gruppen uppdaterade om vad som hände i resten av projektet, vilket bidrog till att det fanns mindre att ta upp på de större mötena.
+
+\subsection{Dokumentationsmetoden}
+Det fanns ingen konkret tidsplan för dokumentation, istället så delades ansvarsområden ut för olika delar av dokumentationen. Tidsplanen för dokumentationen var att respektive dokument skulle vara klart till sin deadline, med en eller två dagar till godo för korrekturläsning och redigering innan deadline.
+\\ \\ 
+I början av projektet dokumenterades det uteslutande. Då gruppen hade hårda deadlines med dokument som skulle lämnas in så lades all energi på att färdigställa dem i så stor omfattning som möjligt. En idé hade varit att ta paus från dokumentationen några dagar i början av projektet och istället bara utveckla. Efter denna period utan dokumentation kunde gruppen tänkas ha mer erfarenhet inom projektet, vilket hade gjort det lättare att ta fram de nödvändiga dokumenten. Särskilt arkitekturen hade varit lättare att beskriva med mer insikt i kodbasen och mjukvaran som gruppen började jobba med.
+\\ \\
+Mot slutet av projektet skedde dokumentationen ofta sporadiskt och blev ibland försummad för utvecklingen. Samma metod användes som i början av dokumentationen med undantag av att vissa lade mer tid på dokumentationen än andra, som i sin tur lade mer tid på utvecklingen. En utmaning med dokumentationen i den här fasen var att den var beroende av utvecklingen. Det gick inte att skriva om ett färdigt grafiskt system när det kontinuerligt lades till ny funktionalitet och nytt utseende. En tidsbudgetering och tydlig planering av när vilka stycken skulle skrivas hade underlättat.
+
+\subsection{Utvecklingsmetoden}
+Under projektets början så bestämdes det att utvecklingen skulle ske enligt en fastslagen Scrum-standard. Standarden hade några modifieringar jämfört med vanlig Scrum som kan ses i avsnitt \ref{sec:development-methodology}. En alternativ metod som skulle kunna använts var Kanban-metoden. I Kanban existerar inte sprinter som i Scrum, utan den befintliga produkt-backlogen fylls kontinuerligt på med uppgifter, se avsnitt \ref{sec:kanban}.
+\\ \\
+Kanban hade haft fördelen att gruppen inte behövt förhålla sig till sprinter, men då hade det krävts ett större personligt ansvar och driv hos varje gruppmedlem att prestera. Scrum hade fördelen att det fanns deadlines vid varje sprint som gruppen kunde tidsplanera mot, vilket gav gruppen mer kontroll att se till att uppgifter blev utförda. Gruppen ansåg att Scrum var fördelaktigt i projektet då gruppen bestod av medlemmar vars målsättningar och tidigare erfarenheter skiljde sig åt, men gruppen med Scrum fick en tydlig gemensam målsättning som alla fick ansvar att hjälpa till att uppfylla. Kanban hade gett gruppen mer frihet inom utvecklingen, men risken ansågs vara för stor för att Kanban skulle väljas som utvecklingsmetodik.
+
+\subsection{Prototypningen}
+\label{sec:discussion-prototyping}
+Det var svårt att veta kundens exakta önskemål i projektets början. Gruppen kunde varken något om KI eller Eiffel och hade svårt att sätta sig in i vad kunden ville att slutanvändaren skulle dra för nytta av den färdiga applikationen. Detta ledde till att det var svårt för gruppen att göra prototyper med idéer bortom kundens önskemål. Prototyperna fick därför i början ett utseende som var ganska likt det som gruppen redan hade att utgå ifrån. En tanke gruppen hade var att läsa på om KI och Eiffel i början av projektet, men det var oklart om det hade hjälpt, då gruppen saknade den erfarenhet kring storskalig användning av kontinuerlig integration.
+\\ \\
+Tidsplanering för prototypande kunde ha varit bättre och borde ha skett tidigare. En erfarenhet som drogs sent i projektet var att det hade varit nyttigt att arbeta med prototyper precis i början av varje sprint, men speciellt i början av projektet. 
+\\ \\
+I avsnitt \ref{sec:prototypes-theory} nämndes det att det finns en risk med att arbeta med prototypning i en agil utvecklingsmetod. Risken är att utveckling sker direkt utan att koncept och idéer tas fram först. Ungefär detta hände i projektet, då ingen övergripande plan fanns för förberedande arbete. Arbetet togs dock ikapp efter ungefär en sprint, men det skapades fortfarande ingen övergripande plan över hur prototypningen skulle föregå implementation av nya funktioner.
+Precis innan sprint tre gjordes en sprintplanering för alla Trello-kort, och där inkluderades prototypningen. Detta resulterade i ett bättre flöde i utvecklingen mot slutet av projektet.
+\\ \\
+Prototyperna användes inte som en grund för gruppens utveckling i början utan sågs mer som något att visa för kunden på möten. mer återkoppling på prototypernas utseende och funktion hade kunnat vara fördelaktigt. Till exempel hade det kunnat ske genom användbarhetstester. Det enda gruppen hade var möten för återkoppling med kunden då inget annat planerades in. Enligt avsnitt \ref{sec:usability-tests} hade användbarhetstester kunnat ge mer information om hur användarvänlig prototyperna och senare även applikationen var, och det hade eventuellt hjälpt utvecklingen att konvergera mot ett bättre resultat. Å andra sidan hade detta även kunnat ta mycket tid från till exempel utvecklingen, vilken hade kunnat leda till att inte lika många krav uppfylldes.  
+\\ \\
+Det hade också varit nyttigt med mer strukturerad planering för hur utförandet av prototypningen skulle gå till, inte bara när det skulle ske. Prototypningsgrupper var något som prövades mot slutet av projektet vilket visade sig vara effektivt då fler idéer lyftes och mer genomtänkta prototyper kunde skapas. Pappersprototyper samt digitala pappersprototyper i verktyget InVision skapades under projektets gång, men i slutet av projektet användes endast pappersprototyper. Dessa ansågs ha en bra detaljeringsgrad för att få fram idéer och utseende utan att gruppen låstes fast vid specifika detaljer. 
+
+% Anteckningar från möte med Becca:
+%Det är svårt att veta i början hur projektet ska bli (enligt kunden). Vi kan inte så mycket om KI och eiffel, vi vet inte vad det är de vill ha ut från det här, därför blir det svårt för oss att göra prototyper där vi tänker "förbi" kunden. Därför var prototyperna i början ganska lika det som vi hade att utgå från. Själva "innehållet" i prototypen vet vi inte om vi hade kunnat göra annorlunda. Vi hade kunnat läsa på om KI och eiffel tidigt i projektet, men oklart om det hade hjälpt.
+
+%Om man tänker själva utförandet av prototypen så hade vi definitivt kunnat tänka på att utföra den tidigare, eller i varje fall planera för den. Vi hade ingen plan på vad vi behövde ha som grund innan vi började utveckla. Prototypen sågs som någonting att visa för kunden, inte som en grund för oss. 
+
+%Sen hade vi kunnat planera in tider för prototypning (när i tiden ska prototypningen ske, typ när i sprinter). Sedan hade vi kunnat titta på vad för typ av prototyper vi skulle ha kunnat använda. Vi använde bara pappersprototyper (digitaliserat med InVision).
+
+%Vi hade kunnat planera in användartester av prototyperna. Vi hade bara återkopplingsmöten med kund.
+
+%Vi hade kunnat tillsätta prototypgrupper. Vi började trello-kort för prototypning väldigt sent, detta ledde till att i början så blev prototypandet inte tidsbudgeterat.
+
+%TODO: REBECCA FACT CHECKAR DETTA OCH EDITAR
+%Det hade behövts mer samarbete inom prototypningen för att få fram så många idéer som möjligt. Prototyper kan vara för "fattiga" och för "rika". För fattiga är att det finns för lite alternativ och man hamnar på en "smal" väg, det finns bara en väg som projektet kan ta för att alternativ saknas. För rika är att det finns för många alternativ som projektet kan välja på, då vet man inte vilken man ska välja. Möjligen är alternativen inte tillräckligt väldefinierade. Det bästa är en "balans" mellan rika och fattiga.
+
+\subsection{Deadlines och tidsplanering}
+Då gruppen jobbade i sprinter så fanns det tydliga milstolpar som skulle uppnås vid sprinternas slut. Detta gav gruppen något att förhålla sig till och hjälpte gruppen se till att kraven som ställts på applikationen blev uppfyllda. Gruppens handledare gav råd om att se till att alla krav som inte var uppfyllda planerades in i alla sprinter som var kvar under projektet direkt, istället för att gruppen planerade en sprint i taget. Varje krav fick en ansvarig person tillsatt med uppdraget att se till att kravet blev utfört. Detta var nyttigt för att kunna tidsbudgetera för enskilda medlemmar så att inte arbetet saktade av. Att planera in alla sprinter på samma gång ledde till att Scrum-metodiken som gruppen använde blev mer lik vattenfalls metodiken, men med ökad produktivitet som resultat.
+\\ \\
+Dokumentationen blev aldrig tidsplanerad på samma sätt som utvecklingen. Det gjordes en ansats att lägga upp ett arbetsflöde för dokumentationen på Trello, på samma sätt som gruppen hade gjort för utvecklingen, men det valdes bort ganska snabbt då samma arbetsflöde inte var applicerbart. 
+Den bristfälliga tidsplaneringen som orsakades av delvis otydlig arbetsmetodik ledde till att dokumentationen ofta blev sparad till sist med för lite tid till deadline. Detta orsakade mer än en gång dokument som behövde kompletteras på grund av otillräcklig information. Gruppen hade behövt sätta hårda interna deadlines en bra bit före leveransdatum av dokument för att kunna komplettera eventuella brister. Det gjordes en ansats att hitta en tydligare arbetsmetodik som kunde förbättra processen och tidsåtgången vid dokumentation, men ingen alternativ metod uppnåddes.
+
+\section{Arbetet i ett större sammanhang}
+\label{sec:work-wider-context}
+Mjukvaruprojekt kan ha påverkan i sammanhang utanför sitt projekt. Här redogörs de etiska och samhälleliga aspekter samt miljöaspekter som det här projektet kan påverka.
+
+\subsection{Etiska och samhälleliga aspekter}
+\label{sec:ethical-aspects}
+Det värde som applikationen ska ge till kunden ska ligga i en effektivisering av deras arbetsflöde genom att visualisera det. En effektivisering av ett arbetsflöde gör så att arbetsbördan kan minskas för vissa eller öka för andra. En sådan effektivisering av arbetet skulle kunna leda till att arbetsmiljön förbättras på en arbetsplats och arbetsbördor kan fördelas om på ett fördelaktigare sätt.
+\\ \\
+Ur ett etiskt perspektiv skulle den här effektivisering kunna leda till att en persons arbetsroll, till exempel analytiker, effektiviseras bort och i ett längre perspektiv kan det leda till varsel av anställda. I ett större perspektiv skulle applikationen kunna användas för att förenkla utvecklingen av oetiska produkter som använder sig av mjukvara, till exempel tillverkning av bomber, virus och annat oetiskt.
+%There must be a section discussing ethical and societal
+%aspects related to the work. This is important for the authors
+%to demonstrate a professional maturity and also for achieving
+%the education goals. If the work, for some reason, completely
+%lacks a connection to ethical or societal aspects this must be
+%explicitly stated and justified in the section Delimitations in
+%the introduction chapter.
+
+%In the discussion chapter, one must explicitly refer to sources
+%relevant to the discussion.
+
+\subsection{Miljöaspekter}
+\label{sec:enviromental-aspects}
+Applikationen har till en början en direkt påverkan på miljö genom att förbruka resurser under sin drift,
+men för att minimera mängden resurser som förbrukas finns som tur är flera strategier. En
+strategi som lämpar sig väl åt applikationer som hanterar stora datamängder är en approximativ
+beräkningsmodell. \cite{greensoft} Istället för att fullt evaluera alla beräkningar kan de approximeras
+och på så sätt spara in beräkningskraft och därmed naturresurser.
+\\ \\
+De resurser man kan spara in på genom att optimera mjukvaran är såklart begränsade, och till slut
+behöver man betrakta den hårdvara på vilken applikationen körs. Vissa webbhotell använder större del
+förnyelsebar energi än andra, vilket är eftersträvansvärt och är något som är värt att
+ha i åtanke när en serverleverantör väljs.
+\\ \\
+Vilka webbhotell som är bäst ur en miljösynpunkt är såklart inte konstant och det kan vara aktuellt att byta
+webbhotell i framtiden. För att minimera friktionen av och uppmuntra till migration av applikation
+kan den läggas i en \textit{docker-behållare}. \cite{website:docker}
+\\ \\
+Applikationen gör det enklare att identifiera flaskhalsar i en KI-flöde, vilket möjliggör enklare
+effektivisering. På så sätt kan resurser som tidigare lagts på att leta flaskhalsar frigöras,
+vilket skulle sänka bruket av naturresurser. Troligen kan detta ge upphov till en \textit{studs-effekt}
+då de frigjorda resurserna använd för att främja ekonomisk tillväxt och på så sätt öka bruket av
+naturresurser. \cite{greensoft}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% lorem.tex ends here
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "demothesis"
+%%% End: 

@@ -1,0 +1,164 @@
+\section{Krav}
+Kravställningen på applikationen är ej absolut och kommer att utvärderas och ändras i överens-kommelse med kund. 
+
+\subsection{Gränssnitt}
+Eftersom applikationens enda uppgift är att presentera data så har den få gränssnitt.
+
+\subsubsection{Användargränssnitt}
+Applikationen byggs för att köras i en webbläsare på en persondator vilket är dess enda gränssnitt mot användaren.
+\begin{table}[h!]
+  \centering
+  \caption{En tabell över applikationens krav på användargränssnitt.}
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | c | l | X | c | }
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Orginal & Användaren ska kunna nå allt innehåll i applikationen med hjäp av mus och tangentbord. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.0 & Gränssnittet ska vara användarvänligt, enligt testfall T01 i dokumentet Testplan. & 1 \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:krav_interface}
+\end{table}
+
+\subsection{Funktionella krav}
+\begin{table}[h!]
+  \centering
+  \caption{En tabell över applikationens funktionella krav.}
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | c | l | X | c | }
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Hänv. till figur i v.1.1 & Applikationen ska kunna visa en graf med noder som representerar aggregerade händelser, motsvarande nivå 1 i figur \ref{fig:system_overview}. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.4cm}{Ny i v. 1.0\\Omformulerad i v. 1.2 och v. 1.5} & I den aggregerade grafen enligt K3 ska användaren kunna visa alla händelser i ett valt tidsintervall. & 1 \\
+	  \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.4cm}{Ny i v. 1.0\\Ändrad prio i v. 1.3} & Användaren ska kunna se om det existerar händelser utanför det valda tidsintervallet. & 2 \\     
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.0 & För händelser som har en status ska statusen visualiseras i färg. & 1 \\ 
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.4cm}{Ny i v. 1.0\\Borttagen i v. 1.1} & \sout{Användaren ska kunna se händelsetyp och färgsättning för varje nod i en graf utan att behöva förflytta vyn.} & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.5cm}{Ny i v. 1.0\\Omformulerad i v. 1.1\\Ändrad prio i v. 1.3} & Användaren ska kunna se händelsetyp och status i varje nod i den aggregerade grafen utan att behöva förflytta vyn. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Omformulerad i v. 1.0 & Användaren ska kunna se pålitlighetsgrad för artefakter i aggregerade händelseförlopp. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.4cm}{Omformulerad i v. 1.0\\Ändrad prio i v. 1.3} & Användaren ska kunna se pålitlighetsgrad för artefakter i för ett händelseförlopp. & 2 \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:krav_funk1}
+\end{table}
+\newpage
+
+\begin{table}[h!]
+  \centering
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | c | l | X | c | }
+    \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.4cm}{Omformulerad i v. 1.1\\Omformulerad i v. 1.5} & Användaren ska kunna se grad av klarade och misslyckade testsviter i aggregerade händelseförlopp. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v 1.1 & Användaren ska kunna se grad av klarade och misslyckade testfall för testsviter i ett händelseförlopp. & 1 \\
+    \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Original & Användaren ska kunna se om testfall lyckats eller misslyckats i ett händelseförlopp. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Hänv. till figur i v.1.1 & Användaren ska kunna välja en nod i den aggregerade grafen och presenteras med en detaljerad samling av händelser som noden representerar, motsvarande nivå 2 i figur \ref{fig:system_overview}. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.4cm}{Ny i v. 1.1\\Omformulerad i v. 1.2} & Användaren ska kunna välja en nod i den aggregerade grafen och bli presenterad med förändringar över tid hos nodens attribut, motsvarande nivå 2 i figur \ref{fig:system_overview}. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Hänv. till figur i v.1.1 & Användaren ska kunna välja händelser i den detaljerade samlingen och presenteras med en graf som representerar dess händelseförlopp, motsvarande nivå 3 i figur \ref{fig:system_overview}. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Original & Om användaren navigerar till ett händelseförlopp via en aggregerad graf ska hen kunna navigera tillbaka den aggregerade grafen. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Original & Användaren ska kunna välja noder i händelseförloppet och länkas till programmet som genererade händelsen. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Omformulerad i v. 1.4 & Användaren ska kunna utläsa utförandetid för händelser i ett händelseförlopp där data om utförandetid finns. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Borttaget i 1.1 & \sout{Användaren ska kunna utläsa genomsnittlig tid mellan sammankopplade händelsetyper i den aggregerade vyn.} & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.0 & Om internetuppkopplingen försvinner under en användarsession ska användaren få en notis om det. & 2 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.3 & Användaren ska kunna zooma in och ut i en graf med hjälp av ett grafiskt skjutreglage och genom att scrolla med musen. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & \parbox[t]{3.4cm}{Ny i v. 1.3\\Omformulerad i v. 1.4} & Användaren ska kunna klicka på en nod i en graf och presenteras en detaljerad beskrivning av data som noden representerar. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.3 & Användaren ska kunna klicka på en knapp vid en graf varpå hela grafen ska bli synlig och centrerad. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.3 & Användaren ska kunna klicka på en knapp och presenteras med information om applikationen. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.3 & Användaren ska kunna filtrera händelser i nivå 2 för att skapa en ny aggregering i nivå 1. & 3 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.4 & Användaren ska kunna utläsa kötid för händelser i ett händelseförlopp där data om kötid finns. & 2 \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:krav_funk2}
+\end{table}
+
+\newpage
+\subsection{Icke-funktionella krav}
+\begin{table}[h!]
+  \centering
+  \caption{En tabell över applikationens icke-funtionella krav.}
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | c | l | X | c | }
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.0 & Applikationen ska ha en README-fil med instruktioner för hur applikationen används. & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Ny i v. 1.0 & En användare i målgruppen ska kunna använda applikationen självständigt med hjälp av informationen i README-filen. & 2 \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:krav_ickefunk}
+\end{table}
+
+\subsection{Prestandakrav}
+\begin{table}[h!]
+  \centering
+  \caption{En tabell över applikationens prestandakrav.}
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | c | l | X | c | }
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Borttaget i 1.0 & \sout{Databasen på serversidan ska kunna lagra minst 4000 händelser.} & 1 \\
+      \hline
+      \addtocounter{req_num}{1}
+      K\arabic{req_num} & Original & Webbapplikationen ska kunna hantera minst 500 händelser åt gången. & 1 \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:krav_pres}
+\end{table}

@@ -1,0 +1,222 @@
+%importerat (2017-01-24) layout-bibliotek från Hannes Snögren, KMM 14/15. Med godkännande från honom. 
+%ändrat i settings sedan dess. babel-bibliotek för swedish krävs för kompilering.
+%debian: sudo apt-get install texlive-lang-european
+
+\usepackage[swedish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{calc}  
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+
+%Spacing för sections och subsections
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+%\titlespacing*{\subsection}
+%{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+% Sidformat
+\usepackage{a4wide}
+
+% Fixa Appendix-titlar
+\usepackage[titletoc,title]{appendix}
+
+% Bättre tabeller
+\usepackage{tabularx}
+
+% Bättre bildtexter
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
+
+% Enkelt kommando som låter mig attgöra-markera text
+\newcommand{\todo}[1] {\textbf{\textcolor{red}{#1}}}
+
+% Nytt \paragraph låter oss ha onumrerade bitar
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+{-3.25ex\@plus -1ex \@minus -.2ex}%
+{1.5ex \@plus .2ex}%
+{\normalfont\normalsize\bfseries}}
+\makeatother
+
+\providecommand{\LAYOUTlogga}{../mall/Logga.png}
+\providecommand{\LAYOUTdatum}{\today}
+
+
+%% Headers och Footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.12]{\LAYOUTlogga}}
+\setlength{\headsep}{0.4in}
+\rhead{\ifdef{\LAYOUTutfardare}{Utfärdat av \LAYOUTutfardare \\\LAYOUTdatum}\LAYOUTdatum}
+\lfoot{\LAYOUTkursnamn \\ \LAYOUTdokumenttyp}
+\cfoot{\thepage}
+\rfoot{\LAYOUTprojektgrupp \\ \LAYOUTprojektnamn}
+
+%% Titelsida
+\newcommand{\LAYOUTtitelsida}{%
+{\ }\vspace{45mm}
+\begin{center}
+  \textbf{\Huge \LAYOUTdokument}
+\end{center}
+\begin{center}
+  {\Large Redaktör: \LAYOUTredaktor}
+\end{center}
+\begin{center}
+  {\Large \textbf{Version \LAYOUTversion}}
+\end{center}
+\vspace{5mm}
+\ifdef{\LAYOUTfrontpicture}{
+\begin{center}
+    \LAYOUTfrontpicture
+\end{center}
+}
+
+\newpage
+}
+
+
+% Projektidentitet
+\newenvironment{LAYOUTprojektidentitet}{%
+{\ }\vspace{45mm}
+\begin{center}
+  {\Large PROJEKTIDENTITET}\\[0.5ex]
+  {\small
+  \LAYOUTartaltermin, \LAYOUTprojektgrupp\\
+  Linköpings Tekniska Högskola, IDA
+  }
+\end{center}
+\begin{center}
+  {\normalsize Gruppdeltagare}\\
+  \def\arraystretch{1.5}%
+  \begin{tabular}{|l|l|p{25mm}|l|}
+    \hline
+    \textbf{Namn} & \textbf{Ansvar} & \textbf{Telefon} & \textbf{E-post} \\
+    \hline
+}%
+{%
+    \hline
+  \end{tabular}
+\end{center}
+\begin{center}
+  {\small
+    \ifdef{\LAYOUTgruppadress}{\textbf{E-postlista för hela gruppen}: \LAYOUTgruppadress\\}{}
+    \ifdef{\LAYOUTgrupphemsida}{\textbf{Hemsida}: \LAYOUTgrupphemsida\\[1ex]}{}
+    \ifdef{\LAYOUTkund}{\textbf{Kund}: \LAYOUTkund\\}{}
+    \ifdef{\LAYOUTkundkontakt}{\textbf{Kontaktperson hos kund}: \LAYOUTkundkontakt\\}{}
+    \ifdef{\LAYOUTkursansvarig}{\textbf{Kursansvarig}: \LAYOUTkursansvarig\\}{}
+    \ifdef{\LAYOUThandledare}{\textbf{Handledare}: \LAYOUThandledare\\}{}
+  }
+\end{center}
+\newpage
+}
+\newcommand{\LAYOUTgruppmedlem}[4]{\hline {#1} & {#2} & {#3} & {#4} \\}
+
+%% Dokumenthistorik
+\newenvironment{LAYOUTdokumenthistorik}{%
+\begin{center}
+  Dokumenthistorik\\[1ex]
+  %\begin{small}
+  \def\arraystretch{1.5}%
+    \begin{tabular}{|l|l|p{45mm}|p{30mm}|l|}
+      \hline
+      \textbf{Version} & \textbf{Datum} & \textbf{Utförda förändringar} & \textbf{Utförda av} & \textbf{Granskad} \\
+      }%
+    {%
+			\hline
+    \end{tabular}
+  %\end{small}
+\end{center}
+}
+
+\newcommand{\LAYOUTversionsinfo}[5]{\hline {#1} & {#2} & {#3} & {#4} & {#5} \\}
+
+% Kravlistor
+\newenvironment{LAYOUTkravlista}{
+	\center
+		\tabularx{\textwidth}{| p{1.2cm} | p{1.9cm} | X | c |}
+			\hline
+			\textbf{Krav} & \textbf{Förändring} & \textbf{Beskrivning} & \textbf{Prioritet} \\\hline
+}
+{
+		\endtabularx
+	\endcenter
+}
+
+\newcounter{LAYOUTkravnummer}
+\addtocounter{LAYOUTkravnummer}{1}
+\newcommand{\LAYOUTkrav}[4][Krav \arabic{LAYOUTkravnummer}]{{#1} & {#2} & {#3} & {#4} \stepcounter{LAYOUTkravnummer}\\\hline}
+
+% Milstolps-lista
+\newenvironment{LAYOUTmilstolpar}{
+	\center
+		\tabularx{\textwidth}{| p{1.2cm} | X | l |}
+			\hline
+			\textbf{Nr} & \textbf{Beskrivning} & \textbf{Datum} \\\hline
+}
+{
+		\endtabularx
+	\endcenter
+}
+
+\newcounter{LAYOUTstolpnummer}
+\addtocounter{LAYOUTstolpnummer}{1}
+%\newcommand{\LAYOUTmilstolpe}[3][Krav \arabic{LAYOUTstolpnummer}]{{#1} & {#2} & {#3} \stepcounter{LAYOUTstolpnummer}\\\hline}
+\newcommand{\LAYOUTmilstolpe}[3]{{#1} & {#2} & {#3} \\\hline}
+
+% Aktivitets-lista
+\newenvironment{LAYOUTaktivitetslista}{
+	\center
+		\tabularx{\textwidth}{| p{0.3cm} | X | c | c |}
+			\hline
+			\textbf{Nr} & \textbf{Beskrivning} & \textbf{Beroende av} & \textbf{Timmar} \\\hline
+}
+{
+		\endtabularx
+	\endcenter
+}
+
+\newcounter{LAYOUTaktivitetsnummer}
+\addtocounter{LAYOUTaktivitetsnummer}{1}
+% \newcommand{\LAYOUTaktivitet}[4][\arabic{LAYOUTstolpnummer}]{{#1} & {#2} & {#3} & {#4} \stepcounter{LAYOUTstolpnummer}\\\hline}
+\newcommand{\LAYOUTaktivitet}[4]{{#1} & {#2} & {#3} & {#4} \\\hline}
+
+% Mall för mötesprotokoll
+\newenvironment{projektmote}[2]{
+  {\ }\vspace{5mm}
+
+  \centerline{\textbf{\Huge #1}}
+  \vspace{2mm}
+  \centerline{\LARGE #2}
+  \vspace{10mm}
+
+  \begin{itemize}
+}
+{
+  \end{itemize}
+}
+
+\newcounter{paragrafnummer}
+\addtocounter{paragrafnummer}{1}
+\newcommand{\paragraf}[1]{\item{\textsection \arabic{paragrafnummer}. {#1}}\addtocounter{paragrafnummer}{1}}
+
+% Mall för Statusrapport
+\newenvironment{statusrapport}{
+  \center
+    \tabularx{\textwidth}{| p{0.4cm} | X | X | p{14.5mm} | p{13.5mm} | p{16.5mm} | p{16.5mm} |}
+    \hline
+    \textbf{Nr} & \textbf{Aktivitet} & \textbf{Beroenden} & \textbf{Planerad tid} & \textbf{Nedlagd tid} & \textbf{Planerad klar} & \textbf{Beräknat klart} \\\hline
+}
+{
+    \endtabularx
+  \endcenter
+}
+
+\newcommand{\aktivitetstatus}[7]{{#1} & {#2} & {#3} & {#4} & {#5} & {#6} & {#7} \\\hline}

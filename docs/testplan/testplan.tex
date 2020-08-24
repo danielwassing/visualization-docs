@@ -1,0 +1,102 @@
+\documentclass[titlepage, a4paper]{article}
+\input{../mall/layout.tex}
+
+%parametrar som behövs för layout
+\newcommand{\LAYOUTredaktor}{Joakim Argillander}
+\newcommand{\LAYOUTversion}{0.3}
+\newcommand{\LAYOUTdokument}{Testplan}
+\newcommand{\LAYOUTdokumenttyp}{Testplan}
+\newcommand{\LAYOUTgranskatdatum}{}
+\newcommand{\LAYOUTgranskare}{}
+\newcommand{\LAYOUTgodkannare}{}
+\newcommand{\LAYOUTgodkantdatum}{}
+\newcommand{\LAYOUTkursnamn}{TDDD96}
+\newcommand{\LAYOUTprojektnamn}{Visualization}
+\newcommand{\LAYOUTprojektgrupp}{Grupp 2}
+\newcommand{\LAYOUTartaltermin}{VT 2017}
+\newcommand{\LAYOUTgrupphemsida}{https://gitlab.ida.liu.se/tddd96/visualization}
+\newcommand{\LAYOUTkund}{Kristian Sandahl}
+\newcommand{\LAYOUTkundkontakt}{Kristian Sandahl}
+\newcommand{\LAYOUTkursansvarig}{Kristian Sandahl}
+\newcommand{\LAYOUThandledare}{Lena Buffoni}
+
+
+%override paket för detta doc.
+\usepackage[swedish]{babel}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows}
+\usepackage{biblatex}
+\addbibresource{../mall/references.bib}
+
+\pagenumbering{roman}
+
+\DeclareGraphicsRule{.0.pdf}{pdf}{*}{}
+
+\begin{document}
+
+\LAYOUTtitelsida
+
+\begin{LAYOUTprojektidentitet}
+\LAYOUTgruppmedlem{Johan Nåtoft}{Teamledare}{070-7661443}{johna702@student.liu.se}
+\LAYOUTgruppmedlem{Joak	im Argillander}{Testledare}{076-8618641}{joaar286@student.liu.se}
+\LAYOUTgruppmedlem{Victor Bodin}{Kvalitetssamordnare}{073-5183199}{vicbo282@student.liu.se}
+\LAYOUTgruppmedlem{Sebastian Callh}{Utvecklingsledare}{073-8204664}{sebca553@student.liu.se}
+\LAYOUTgruppmedlem{Rebecca Lindblom}{Analysansvarig}{073-4364079}{rebli156@student.liu.se}
+\LAYOUTgruppmedlem{Johan Thornström}{Arkitekt}{070-5297445}{johth918@student.liu.se}
+\LAYOUTgruppmedlem{Jonathan Wahlund}{Konfigurationsansvarig}{070-6106911}{johwa732@student.liu.se}
+\LAYOUTgruppmedlem{Daniel Wassing}{Dokumentansvarig}{076-7741110}{danwa223@student.liu.se}
+% lägg till fler här
+\end{LAYOUTprojektidentitet}
+
+\newpage
+\tableofcontents	%Innehållsförteckning
+
+
+\begin{LAYOUTdokumenthistorik}
+\LAYOUTversionsinfo{0.1}{2017-02-02}{Första utkast}{Joakim Argillander}{}
+\LAYOUTversionsinfo{0.2}{2017-02-16}{Standardiserad mall}{Daniel Wassing}{}
+\LAYOUTversionsinfo{0.3}{2017-02-16}{Reviderat ansvarsområden och påbörjat krav}{Joakim Argillander}{Victor Bodin}
+\LAYOUTversionsinfo{1.0}{2017-04-22}{Uppdaterat testningsförfarande}{Joakim Argillander}{}
+
+\end{LAYOUTdokumenthistorik}	
+\newpage
+%inputs go here
+\pagenumbering{arabic}
+\input{tex/testplansidentifierare}
+\newpage
+\input{tex/referenser}
+\newpage
+\input{tex/introduktion}
+\newpage
+\input{tex/testpunkter}
+\newpage
+\input{tex/ja_test_funk}
+\newpage
+\input{tex/tillvagagangssatt}
+\newpage
+\input{tex/kriterier_for_test}
+\newpage
+\input{tex/kriterier_for_avbrytning}
+\newpage
+\input{tex/testleverabler}
+
+\newpage
+\input{tex/personal_och_kompetensbehov}
+\newpage
+\input{tex/ansvarsomraden}
+\newpage
+%\input{tex/schema}
+%\input{tex/planeringsrisker_och_beredskapsplan}
+
+%... add more as needed
+\clearpage
+\printbibliography
+
+\newpage
+\begin{appendices}
+
+\end{appendices}
+
+\end{document}

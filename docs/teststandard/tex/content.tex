@@ -1,0 +1,47 @@
+\section{Introduktion}
+\subsection{Syfte}
+Syftet med detta dokument är att etablera en standard för planering och utförande av tester för projektet. \\
+\medskip
+Dokumentet utgör en informell standard för utformning av testfall och formaliseras av testplanen.
+
+\section{Utformning av testfall}
+Testfallen formuleras som nedan;
+\\
+\\
+\textbf{TestID:} \textit{Unik identifierare. Varje testfalls ID inleds av Tx där är ett löpnummer börjandes på 1.}\\
+\textbf{Påstående:} \textit{Vad som ska verifieras. Se nedan (Formulering av testpåstående).}\\
+\textbf{Antaganden:} \textit{De antaganden som understödjer testfallet.}\\
+\textbf{Testdata: } \textit{Variabler och värden som testas.}\\
+\textbf{Teststeg: } \textit{Arbetsgång för testet.}\\
+\textbf{Förväntat resultat: } \\
+\textbf{Uppnått resultat: } \textit{Vad resulterade testet i.}\\
+\textit{Godkänt/Underkänt test:} \textit{Huruvida testet godkändes eller ej.}\\
+\textbf{Kommentarer:} \\
+\medskip
+\\
+\textit{Exempel:}\\
+\\
+\textbf{TestID:} T01\\
+\textbf{Påstående:} Verifiera genom tidtagning med ramverkets tidtagninsfunktionalitet att hemsidan läses in på under två millisekunder. \\
+\textbf{Antaganden:} Webbläsarens cacheminne är rensat. \\
+\textbf{Testdata:} Uppmätt tid \\
+\textbf{Teststeg:} Starta tidtagning, läs in hemsidan, läs av inläsningstiden. \\
+\textbf{Förväntat resultat: } Hemsidans inläsningstid understiger två millisekunder. \\
+\textbf{Uppnått resultat:} Hemsidan inläsningstid var en millisekund.\\
+\textbf{Godkänd/Underkänt test: } GODKÄNT \\
+\textbf{Kommentarer:} Testet är allmängiltigt för alla marknadsledande webbläsare. 
+
+\subsection{Formulering av testpåstående}
+För att formulera vad som ska verifieras används formatet; \\
+\\
+\textbf{Verifiera ...} \\
+\textbf{... genom att använda ...} [verktyg, dialog] \\
+\textbf{... med ...} [förutsättningar] \\
+\textbf{... att ...} [vad som returneras, visas eller demonstreras]\\
+\\
+\textit{Exempel:}\\
+Se testfallsexempel ovan.
+
+\section{Enhetstestning}
+\section{Systemtestning}
+\section{Integrationstestning}

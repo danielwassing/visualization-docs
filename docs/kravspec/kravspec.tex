@@ -1,0 +1,98 @@
+\documentclass[titlepage, a4paper]{article}
+\input{../mall/layout.tex}
+
+%parametrar som behövs för layout
+\newcommand{\LAYOUTredaktor}{Rebecca Lindblom}
+\newcommand{\LAYOUTversion}{1.5}
+\newcommand{\LAYOUTdokument}{Kravspecifikation}
+\newcommand{\LAYOUTdokumenttyp}{Kravspecifikation}
+\newcommand{\LAYOUTgranskatdatum}{}
+\newcommand{\LAYOUTgranskare}{}
+\newcommand{\LAYOUTgodkannare}{}
+\newcommand{\LAYOUTgodkantdatum}{}
+\newcommand{\LAYOUTkursnamn}{TDDD96}
+\newcommand{\LAYOUTprojektnamn}{Visualization}
+\newcommand{\LAYOUTprojektgrupp}{Grupp 2}
+\newcommand{\LAYOUTartaltermin}{VT 2017}
+\newcommand{\LAYOUTgrupphemsida}{https://gitlab.ida.liu.se/tddd96/visualization}
+\newcommand{\LAYOUTkund}{Kristian Sandahl, Ola Leifler}
+\newcommand{\LAYOUTkundkontakt}{Kristian Sandahl}
+\newcommand{\LAYOUTkursansvarig}{Kristian Sandahl}
+\newcommand{\LAYOUThandledare}{Lena Buffoni}
+
+%override paket för detta doc.
+\usepackage[swedish]{babel}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{adjustbox}
+\usetikzlibrary{shapes, arrows}
+\usepackage{graphicx}
+\graphicspath{ {../../images/} }
+\pagenumbering{roman}
+\DeclareGraphicsRule{.0.pdf}{pdf}{*}{}
+\usepackage{biblatex}
+\usepackage{ulem}
+\addbibresource{../mall/references.bib}
+
+\begin{document}
+
+\LAYOUTtitelsida
+
+\begin{LAYOUTprojektidentitet}
+\LAYOUTgruppmedlem{Johan Nåtoft}{Teamledare}{070-7661443}{johna702@student.liu.se}
+\LAYOUTgruppmedlem{Joakim Argillander}{Testledare}{076-8618641}{joaar286@student.liu.se}
+\LAYOUTgruppmedlem{Victor Bodin}{Kvalitetssamordnare}{073-5183199}{vicbo282@student.liu.se}
+\LAYOUTgruppmedlem{Sebastian Callh}{Utvecklingsledare}{073-8204664}{sebca553@student.liu.se}
+\LAYOUTgruppmedlem{Rebecca Lindblom}{Analysansvarig}{073-4364079}{rebli156@student.liu.se}
+\LAYOUTgruppmedlem{Johan Thornström}{Arkitekt}{070-5297445}{johth918@student.liu.se}
+\LAYOUTgruppmedlem{Jonathan Wahlund}{Konfigurationsansvarig}{070-6106911}{johwa732@student.liu.se}
+\LAYOUTgruppmedlem{Daniel Wassing}{Dokumentansvarig}{076-7741110}{danwa223@student.liu.se}
+\end{LAYOUTprojektidentitet}
+
+
+
+\begin{LAYOUTdokumenthistorik}
+\LAYOUTversionsinfo{0.1}{2017-01-25}{Upprättande av dokument}{Daniel Wassing}{}
+\LAYOUTversionsinfo{0.2}{2017-02-01}{Första utkast inför tekniskt möte}{Kravspecgruppen}{Lena}
+\LAYOUTversionsinfo{0.3}{2017-02-09}{Upprättande av majoritet av krav efter tekniskt möte.}{Rebecca, Sebastian, Joakim}{Rebecca}
+\LAYOUTversionsinfo{1.0}{2017-02-20}{Uppdatering av krav efter handledar- och kundmöte samt intervju.}{Rebecca, Sebastian, Joakim}{Rebecca}
+\LAYOUTversionsinfo{1.1}{2017-03-06}{Uppdatering efter kundmöte och visning av första prototyp, samt uppdatering av kravförändringar}{Rebecca}{Sebastian}
+\LAYOUTversionsinfo{1.2}{2017-03-09}{Tillägg i definition av händelseförlopp, omformuleringar av funktionella krav efter visning av andra prototyp.}{Rebecca}{Daniel}
+\LAYOUTversionsinfo{1.3}{2017-03-27}{Tillägg av funktionella krav enligt prototyp presenterad för kund. Rubrik i avsnitt 3 omformulerad från \textit{Specifika krav} till \textit{Krav}. Ändrad prioritet på tre st krav.}{Sebastian}{Rebecca}
+\LAYOUTversionsinfo{1.4}{2017-04-29}{Förändring av krav för placering av muspekare över nod, förändring och tillägg av krav för tidsvisualisering.}{Rebecca}{Victor}
+\LAYOUTversionsinfo{1.5}{2017-05-15}{Krav på intervallsbredd i tidslinjen borttaget, samt möjlighet för användaren att se genomsnittlig grad av testfallsresultat i testsviter. Ny logotype inlagd.}{Rebecca}{Victor}
+\end{LAYOUTdokumenthistorik}
+
+\newpage
+\tableofcontents	%Innehållsförteckning
+
+\newpage
+\pagenumbering{arabic} %Påbörja sidnumrering
+
+%https://www.ida.liu.se/~TDDC88/theory/03requirements.pdf
+% Counter för kravnumrering:
+% Innan varje krav läggs en \addtocounter{req_num}{1}.
+% Denna måste ligga precis efter \hline i tabellen och INTE efter cellens innehåll (--> compile error).
+\newcounter{req_num}
+\setcounter{req_num}{0}
+
+%inputs go here
+\input{tex/ordlista}
+\newpage
+\input{tex/introduktion}
+\newpage
+\input{tex/beskrivning}
+\newpage
+\input{tex/specifika_krav}
+\newpage
+\input{tex/ovrigt}
+
+
+\newpage
+\clearpage
+\printbibliography
+\begin{appendices}
+
+\end{appendices}
+
+\end{document}

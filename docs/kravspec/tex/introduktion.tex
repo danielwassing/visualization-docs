@@ -1,0 +1,76 @@
+\section{Introduktion}
+Följande dokument utgör en kravspecifikation för projektet. 
+\subsection{Syfte och målgrupp}
+Syftet med kravspecifikationen är att tydliggöra alla projektets intressenters krav på applikationen. Kravspecifikationen utgör ett konstruktionsunderlag såväl som underlag för dokumentation och testning av applikationen. Kravspecifikationen ska användas som beslutsunderlag för när beslut ska tas om projektet.
+\\
+\\
+Målgruppen för dokumentet är alla projektets intressenter, däribland beställare, utvecklare och testare. 
+\subsection{Avgränsningar}
+Applikationen är ett verktyg för visualisering och utför således ingen databehandling. Den behöver heller inte fungera på mindre skärmar och handhållna enheter eller stödja andra språk än engelska.
+
+\begin{table}[h!]
+  \centering
+  \caption{En tabell över utvecklingsplattformar.}
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | l | X | }
+      \hline
+      \textbf{Operativsystem} & \textbf{Webbläsare} \\
+      \hline
+      Ubuntu 16.04 & Firefox 51.0.1 \\
+      \hline
+      macOS Sierra 10.12.3 & Chrome 55.0.2883.95 \\
+      \hline
+      Windows 8.1, 10 & Chrome 55.0.2883.95 \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:utvecklingsplattformar}
+\end{table}
+\ \\
+Utvecklingen och testning kommer ske på de plattformar som ses i tabell \ref{tab:utvecklingsplattformar} och applikationen är därmed inte garanterad att fungera på andra plattformar. Applikationen kommer att utvecklas som en forskningsprototyp.
+
+\subsection{Dokumentkonventioner}
+\subsubsection{Format på krav}
+Kraven på produkten kommer att anges löpande i de olika avsnitten.
+
+\begin{table}[h!]
+  \centering
+  \caption{En tabell över format på krav.}
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | c | l | X | c | }
+      \hline
+      Kravnummer & Förändring & Kravtext & Prioritet \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:krav_format}
+\end{table}
+\ \\
+Kraven på produkten ges på följande form enligt tabell \ref{tab:krav_format}. Alla krav numreras från K1 och framåt där K indikerar att det är ett krav. Förändring indikerar om kravet är annorlunda från originalkravet. Kravtext ger information om kravet. Prioritet anger om kravet är ett baskrav som uppfylls under utvecklingsiteration 1 (prioritet 1), eller ett krav som uppfylls i en senare utvecklingsinteration (prioritet 2), eller om det är ett krav vid eventuell vidareutveckling (prioritet 3).
+
+\newpage
+\subsubsection{Definitioner}
+Här följer förklaring av ord som används genom hela detta dokument.
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Continous Integration}]
+\item[Artefakt] En faktiskt produkt, t.ex. en JavaScript-klass eller ett dokument.
+\item[Commit] En uppsättning ändringar i ett versionshanteringssystem.
+\item[Continous Integration] Arbetsmetodik för att kontinuerligt integrera, bygga och testa systemändringar.
+\item[Chrome] Webbläsare.
+\item[Eiffel] Ramverk från Ericsson som i det här projektet används för att spåra händelser i CI-system. Ramverket har länge används internt på Ericsson men blev nyligen publikt. Eiffel som helhet har inga versioner, det system som används i projektet är det som finns publicerat i commit 0303cf3. \cite{website:eiffel}
+\item[Firefox] Webbläsare.
+\item[Händelseförlopp] Beskriver den kedja av händelser som sker p.g.a. en ändring i ett CI-system. Kedjan initeras av en kodändring och begränsas av att en pålitlighetsgrad sätts.
+\item[JavaScript] Programmeringsspråk som i projektet används för att skriva applikationen.
+\item[macOS] Operativsystem.
+\item[Meteor] Ramverk för webbutveckling som använder JavaScript. Version 1.4.2.6 används i detta projekt. \cite{website:meteor}
+\item[Pålitlighetsgrad] Mått på hur väl en artefakt presterat vid testning.
+\item[README-fil] Fil med information om en applikation, t.ex. hur den används eller systemkrav.
+\item[Repository, repo] Lagringsutrymme för versionshanterade artefakter.
+\item[Ubuntu] Operativsystem.
+\item[Windows] Operativsystem.
+\end{description}
+
+\subsection{Översikt}
+Kravspecifikationen innehåller en beskrivning av produkten där en tolkning av kundkraven har gjorts och dess funktioner och användaregenskaper beskrivs. Kravspecifikationen innehåller också de specifika krav som formulerats utifrån den tolkning som gjorts av kundens krav och önskemål beträffande gränssnitt, funktioner och prestandakrav samt begränsningar.

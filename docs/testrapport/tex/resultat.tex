@@ -1,0 +1,30 @@
+\section{Resultat och utvärdering}
+Här presenteras ett övergripande resultat av projektets testprocess. Snarare än att redovisa statistik och numerisk data så presenteras här trender (både positiva och negativa sådana) och en analys av processer samt vilka slutsatser som kan dras av dessa.
+
+\subsection{Regressionstest}
+Ur regressionstestloggen i \textit{Bilaga 1} kan utläsas att i cirka $97\%$ av fallen så lyckas alla tidigare test, och ingen tidigare funktionalitet upphör att fungera. I de fall en hel regressionssvit inte godkänns i helhet så har det berott på omfattande ändringar i kodbasen såsom migration till Bootstrap eller design-/kravändringar där testfall inte reviderats. Detta tyder på att de utvecklingsuppgifter (i form av Trello-kort) som utförts har varit välisolerade och planeringen av utvecklingsarbetet har möjliggjort stor parallellutveckling.
+\subsubsection{Utvecklingsmöjligheter}
+Till iteration 4, när en större del av den slutgiltiga funktionaliteten är implementerad, kommer det vara önskvärt att planera att utföra regressionstestning regelbundet, och inte bara när en \textit{utvecklingsgren} sammanfogas med huvudgrenen \textit{development}. Förhoppningen med detta är att kunna upptäcka fel och buggar i källkoden tidigare, då tiden till leverans av produkten närmar sig. Källkoden bör också regressionstestas så fort krav ändras eller tas bort och ändringar i källkoden görs. Detta för att säkerställa att kodbasen fortfarande fungerar utifrån ändrade förutsättningar. 
+
+\subsection{Enhetstest}
+Vid iterationens början var inte enhetstestning planerat, varken utförandet eller vilka enhetstestverktyg som skulle användas. Efter internutbildning i testverktyg och ramverk så har enhetstester börjat användas, men ännu är inte denna testning så pass långt fortskriden att några slutsatser kan dras från detta. En utförlig utvärdering av enhetstestning kan först göras i slutet av iteration 4. 
+\subsubsection{Utvecklingsmöjligheter}
+Enhetstestningen lämnar många utvecklingsmöjligheter, där stora delar handlar om att faktiskt utföra dessa tester och se till att enhetstestningen är så pass heltäckande att stora delar av källkoden beläggs med enhetstester. Här läggs ett större ansvar på utvecklarna då ytterligare en uppgift, att formulera tester, införs. Förhoppningsvis bidrar detta dock till ett minskat krav på dokumentation av källkod, då enhetstesterna i allra högsta grad gör källkoden självdokumenterande.
+\subsection{Funktionstest}
+Funktionstester har varit utvecklingsarbetets huvudform av testning, där varje funktionalitet som utvecklas kan kopplas till ett testfall som utvärderar den utvecklade funktionaliteten på dess Trello-kort. Detta har möjliggjort en dialog mellan testare och utvecklare genom kommentarsfunktionen, där funktionalitet kan utvecklas, testas och sedan eventuellt korrigeras och testas igen. De trender som kan ses, enbart utgående från diskussion på Trello-korten är att testare och utvecklares tolkning av kraven kan variera. När testning och utveckling sker utifrån olika premisser så finns risk att felaktigheter missas eller kravuppfyllelse godkänns felaktigt.
+\subsubsection{Utvecklingsmöjligheter}
+Utvecklingsmöjligheterna under nästkommande iteration rör främst att belägga utvecklingskorten på Trello med testfall tidigt i utvecklingsprocessen. Även att uttryckligen utföra de automatiserade enhetstesterna som ett första steg i att testa varje funktion är någonting som bör ta större plats i testningsarbetet i nästkommande iteration än i iteration 3. 
+\subsection{Acceptanstest}
+Inga acceptanstest har genomförts, men dessa behöver planeras och material till dessa måste formuleras till nästkommande iteration.
+\subsubsection{Utvecklingsmöjligheter}
+Planeringen för detta bör innefatta ett utförande i god tid innan leverans för att kunna åtgärda eventuella problem som upptäcks.
+\subsection{Allmän utvärdering och reflektion}
+Ansvarsfördelningen där varje utvecklare är ansvarig för att förse utvecklingskortet på Trello med testfall är någonting som har fungerat väl. Möjligheten att föra en, för funktionaliteten isolerad, diskussion mellan testare och utvecklare har visat sig nyttigt för att undvika missförstånd. \\
+\\
+Generellt finns det utrymme för att öka både omfattning och frekvens på testning nu i projektets slutskede. Detta innebär att testning bör få ta mer tid i anspråk under nästkommande iteration än i nuläget, då vinsten med att hitta buggar och fel i produktionen tidigt kraftigt överstiger den tid som spenderats på testning. 
+\\
+Trots att alla testområden som tillämpas i projektet har utvecklingsmöjligheter så kan funktionstestning ses som det område där störst framsteg har gjorts och där testningen varit mest uttömmande. Mjukvarutestning i sin simplaste form kan begränsas till endast funktionstestning och ändå lämna relativt stora garantier om systemets kravuppfyllelse. Detta ger stora möjligheter att lämna mycket garantier om systemets kvalitetsfaktorer om även de övriga testområdena utvecklas och tillämpas. 
+\subsection{Riskområden}
+I nuläget visar den utförda testningen på att projektet är som mest sårbart för stora förändringar i kodbasen. Med detta menas exempelvis migrationer till nya ramverk eller standarder samt integration av större subsystem. Risken att ett fatalt fel sker till följd av en större förändring minskas vartefter en väldefinierad arkitektur tas fram och utvecklingsfokus skiftas från utforskning av nya tekniker och ramverk till implementation. 
+\subsection{Aktiviteter}
+Inga aktiviteter har planerats beträffande testning då projektet arbetar enligt agil utvecklingsmetodik och behandlar testning jämnvärdigt med utvecklingsuppgifter. En uppskattning är att testning har tagit $<10\%$ av utvecklingstiden i anspråk, vilket inte har belastat utvecklare så att testning förbisetts. Kostnaden för testning har således varit mycket låg, och ger en säkerhet om systemets status till en mycket låg kostnad.  

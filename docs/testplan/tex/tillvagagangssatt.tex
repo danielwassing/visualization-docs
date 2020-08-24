@@ -1,0 +1,8 @@
+\section{Tillvägagångssätt}
+I enlighet med agila utvecklingsmetoder behandlas testning likvärdigt med utvecklingsuppgifter och varje utvecklare väljer och utför dessa under utvecklingssprintens gång. \\
+\subsection{Regressionstestning}
+Regressionstestning utförs veckovis för att kunna säkerställa byggets status. Varje vecka tillsätts en utvecklare som är ansvarig för den veckans regressionstestning och testar då all tidigare implementerad funktionalitet tillsammans med den veckans nya funktionalitet. Som ett steg i regressionstestningen enhetstestas även tidigare funktionalitet genom ramverket Eiffels automatiska enhetstestning. När regressionstestning utförts registreras detta i databladet \textit{Dokumentation/Testning/Teststatus} för spårbarhet. Där noteras hur många tester som genomförts, antalet tester som ej godkändes och vilka det var. 
+\\
+\subsection{Enhetstestning}
+Varje utvecklare är ansvarig för att skapa enhetstest för den funktionalitet som implementeras. Dessa enhetstester skapas för att fungera tillsammas med ramverket Mocha\cite{website:mocha} med tillägget Chai\cite{website:mocha} som en del av ramverket Meteor\cite{website:meteor}. 
+

@@ -1,0 +1,8 @@
+\section{Kriterier för avbrytande och återupptagande av test}
+Ett test ska avbrytas i händelse av att antagandena inte kan uppfyllas, ytterligare antaganden måste göras eller testdata inte kan avläsas. Om teststegen inte kan utföras eller har avvikits från måste testet avbrytas. 
+\\
+\\
+Testning kan återupptas om utförandet går att isolera till de teststeg som finns definierade i testfallet och det går att verifiera att avvikelserna från teststegen inte påverkat utfallet på testet. I händelse av att ytterligare antaganden gjorts, och det inte går att utesluta att det kan påverka testets utfall så avbryts testet och får ej återupptas tills dess att alla antaganden följer specifikationerna i testfallet. 
+\\
+\\
+Ett test som avbryts får normalt återupptas omedelbart vid nästa teststeg, och räknas då som \emph{en} testsession. I de fall ett test inte får återupptas utan måste startas om som en ny testsession framgår detta tydligt i testfallets kommentar.

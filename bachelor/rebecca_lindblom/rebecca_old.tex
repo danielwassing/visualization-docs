@@ -1,0 +1,173 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english, swedish]{babel}
+
+\usepackage{cite}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%For headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Rebecca Lindblom}
+\chead{}
+\rhead{\today}
+
+\lfoot{TDDD96}
+\rfoot{VisWiz}
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\title{Individuell del}
+\author{Rebecca Lindblom}
+\date{\today}
+
+\selectlanguage{swedish}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+{
+\sffamily
+\centering
+\large
+
+
+{\huge 
+Prototypers påverkan på utveckling av användargränssnitt
+}
+
+{\large
+Rebecca Lindblom\\
+Version 0.1\\
+}
+}
+
+\clearpage
+
+\renewcommand*\contentsname{Innehållsförteckning}
+\tableofcontents
+\clearpage
+
+\clearpage
+\section{Inledning}
+
+
+\subsection{Syfte}
+Syftet med denna rapport är att undersöka olika typer av prototyper, dess fördelar och nackdelar vid interaktion och förändring, samt dess påverkan på produktkraven. 
+
+\subsection{Frågeställning}
+\begin{enumerate}
+    \item Vilken typ av information kan man få från olika prototyper?
+    \item Vilken typ av prototy gav mest information om...
+    \begin{enumerate}
+    \item övergripande funktioner?
+    \item dolda funktioner?
+    \item navigering? (Knapp på ett vistt ställe, hur man tar sig tillbaka)
+    \item design/utseende på gränssnittet?
+    \end{enumerate}
+\end{enumerate}
+I början av ett projekt vill man ha info om de övergripande globala funktionerna, och i slutet vill man ha mer info om mindre detaljer. På vilket sätt kan man använda prototyper för att få ut mer info om de delarna man är intresserad av? Vilken prototyp ger mer info om övergripande funktioner, och vilken prototyp ger mer info om detaljer som navigering och knappars position.
+
+\subsection{Avgränsningar}
+Rapporten tar endast erfarenheter från detta projekt i beaktande, och ska därför inte ses som en generell undersökning. 
+
+\subsection{Definitioner}
+Prototyp i detta sammanhang syftar på prototyper för användargränssnitt. 
+
+
+\section{Bakgrund}
+\section{Teori}
+\section{Metod}
+
+Hittils har följande gjorts:
+\begin{itemize}
+	\item Möte med kund
+	\item Intervjuer med möjliga användare
+	\item 365-metoden för att ta fram idéer
+	\item Pappersprototyp som version 1
+	\item Presentation för kund av första utkastet, genererade åsikter och förändringar i kravställningen.
+	\item Pappersprototyp som version 2
+	\item Halvt digital variant av version 2 med hjälp av verktyget InVision.
+\end{itemize}
+\ \\
+Kommande iterationer kommer en enkät att skapas för resten av gruppen samt kund att fylla i. Enkäten kommer att innehålla frågor gällande förståelsen och interaktionen med en viss prototyp. Enkäten kommer att besvaras efter visning eller testning av varje typ av prototyp som introduceras i projektet. Svar från denna enkät kommer delvis att stå till grund för analysen i denna rapport.
+
+
+
+\section{Resultat}
+\section{Diskussion}
+\section{Slutsatser}
+
+\section{Appendix}
+Frågor för enkät:
+\begin{itemize}
+	\item 
+\end{itemize}
+
+
+\clearpage
+\section{Referenser}
+\begin{itemize}
+	\item T. Z. Warfel, Prototyping : a practitioner's guide, Rosenfeld, 2009
+	% Den beskriver mest hur själva prototypen byggs, hur man håller användartester och sedan olika verktyg och dess för/nackdelar. Mycket best practices när det gäller skapande av prototypen. 
+	\item C. Snyder, Paper prototyping: the fast and easy way to design and refine user interface, Morgan Kaufmann Publishers, 2003.
+	\item http://www.techrepublic.com/blog/tech-decision-maker/use-prototyping-to-visualize-project-requirements/
+	\item http://invisionapp.com
+	\item J. Arnowitz, M. Arent, N. Berger, Effective prototyping for software makers, Morgan Kaufmann Publishers, 2007
+\end{itemize}
+
+\nocite{*}
+\bibliography{designspec}{}
+\bibliographystyle{plain}
+
+\end{document}

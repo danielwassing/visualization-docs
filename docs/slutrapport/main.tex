@@ -1,0 +1,83 @@
+\documentclass[bachelor,lith,swedish]{liuthesis}
+%% Settings go in settings.tex
+\include{settings}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage{float}
+
+\department{Institutionen för datavetenskap}
+\departmentenglish{Department of Computer Science}
+\departmentshort{IDA}
+% \externalsupervisor{Min företagshandledare}
+\supervisor{Lena Buffoni}
+\examiner{Kristian Sandahl}
+
+\titleswedish{Visualisering av kontinuerlig integration}
+% \subtitleswedish{}
+
+\titleenglish{Visualization of continous integration}
+% \subtitleenglish{}
+
+
+\thesissubject{Datateknik}
+
+\publicationyear{2017}
+\currentyearthesisnumber{001}
+\dateofpublication{2017-05-08}
+
+
+%\author{\textttcc{\textbackslash author}}
+
+% Two authors
+\author{\parbox{\textwidth}{
+    Joakim Argillander\\
+    Victor Bodin \\
+    Sebastian Callh\\
+    Rebecca Lindblom \\
+    Johan Nåtoft \\
+    Johan Thornström \\
+    Jonathan Wahlund\\
+    Daniel Wassing}
+}
+
+\begin{document}
+
+\chapterstyle{VZ43}
+\renewcommand{\partname}{Del}
+\pagestyle{plain}
+\part{Gemensam del}
+\include{intro}
+\include{background}
+\include{theory}
+\include{method}
+\include{results}
+\include{discussion}
+\include{conclusion}
+\part{Individuella delar}
+\renewcommand{\thechapter}{\Alph{chapter}}
+\include{joakim}
+\include{victor}
+\include{seba}
+\include{rebecca}
+\include{johan_n}
+\include{johan_t}
+\include{jonathan}
+\include{wassing}
+\renewcommand*\thesection{\arabic{section}}
+\chapterstyle{Bilagor}
+\part{Bilagor}
+\renewcommand{\thechapter}{Bilaga \arabic{chapter}}
+\include{appendix_seba}
+\include{appendix_rebecca}
+\include{appendix_jonathan}
+\include{appendix_johan_n}
+
+\clearpage
+\printbibliography
+
+\end{document}
+
+

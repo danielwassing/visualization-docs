@@ -1,0 +1,116 @@
+\chapter{Inledning}
+\label{cha:inledning}
+% the introduction should be divided into these two sections
+Den här rapporten beskriver ett projektarbete i kursen TDDD96 Kandidatprojekt i mjukvaruutveckling. Arbetet utfördes under våren 2017 av en grupp bestående av åtta studenter från civilingenjörsprogrammen i datateknik och mjukvaruteknik vid Linköpings Universitet.
+\\ \\
+Rapporten innehåller dels beskrivning av uppgiften, hur den utfördes och vad resultatet blev. Efter detta diskuteras metoden och resultatet ur perspektivet av rapportens frågeställningar. Slutligen redovisas de  individuella utredningar som har utförts enskilt av alla gruppmedlemmar.
+
+\section{Motivering}
+\label{sec:motivering}
+Kontinuerlig integration (KI) är en process för att integrera nya uppdateringar med befintlig version av en mjukvara. Varje ny uppdatering passerar genom ett flöde av tester, kompilering, granskningar med mera. Detta flöde genererar mycket information om hur väl den nya uppdateringen har presterat, men hur enkelt är det för intressenter i ett projekt att ta denna information till sig? En programmerare kanske främst vill veta hur väl hens uppdatering har klarat sig genom flödet, medan en person i högre chefsposition kan vara mer intresserad av att se helheten för utvecklingen. En chef kan till exempel vilja ha svar på följande frågor:
+\begin{itemize}
+\item Hur går utvecklingen? 
+\item Hinner vi i tid till släpp av nästa version? 
+\item Vilka moment tar mest tid?
+\end{itemize}
+\ \\
+En chef utan teknisk spetskompetens kan dock ha svårt att ta till sig de stora mängden detaljerad information som kommer ur ett KI-flöde. Detta arbete gick ut på att utveckla en applikation som visualiserar denna data grafiskt och gör det lättare att tolka vad som sker i flödet.
+
+%This is where the studied problem is described from a general
+%point of view and put in a context which makes it clear that
+%it is interesting and well worth studying. The aim is to make
+%the reader interested in the work and create an urge to
+%continue reading.
+
+\section{Syfte}
+\label{sec:purpose}
+Med denna rapport avses att beskriva den arbetsmetodik som använts och hur ett system på ett lämpligt sätt kan visualisera data. Rapporten syftar också till att beskriva de tekniska resultat som erhållits i samband med genomförandet av detta projekt, samt redovisa de erfarenheter och förbättringsmöjligheter som framkommit under arbetet.
+
+\section{Frågeställningar}
+\label{sec:research-questions}
+
+%This is where the research questions are described.
+%Formulate these as explicit questions, terminated with a
+%question mark. A report will usually contain several different
+%research questions that are somehow thematically connected.
+%There are usually 2-4 questions in total.
+
+%Examples of common types of research questions (simplified
+%and generalized):
+
+\begin{enumerate}
+\item Hur kan en webbapplikation för visualisering av kontinuerlig integration implementeras så att man skapar värde för kunden?
+\item Vilka erfarenheter kan dokumenteras från programvaruprojekt "Visualisering av kontinuerlig
+integration" som kan vara intressanta för framtida projekt?
+\item Vilket stöd kan man få genom att skapa och följa upp en systemanatomi?
+\item Hur kan man använda pappersprototyper för att underlätta kravinsamling? %beskriv vår process, så här kan man göra, BAM
+
+%(Vad/vem/hur/vart är SEMAT Kernel BETA), kan nåtoft stava till SEMAT Kernel Alpha?
+
+%\item How does technique X affect the possibility of achieving the
+%  effect Y?
+
+%\item How can a system (or a solution) for X be realized so
+%  that the effect Y is achieved?
+
+%\item What are the alternatives to
+%  achieving X, and which alternative gives the best effect considering
+%  Y and Z? (This research question is normally broken down in to 2
+%  separate questions.)
+
+\end{enumerate}
+
+
+%Observe that a very specific research question almost always
+%leads to a better thesis report than a general research question
+%(it is simply much more difficult to make something good
+%from a general research question.)
+
+%The best way to achieve a really good and specific research
+%question is to conduct a thorough literature review and get
+%familiarized with related research and practice. This leads to
+%ideas and terminology which allows one to express oneself
+%with precision and also have something valuable to say in the
+%discussion chapter. And once a detailed research question
+%has been specified, it is much easier to establish a suitable
+%method and thus carry out the actual thesis work much faster
+%than when starting with a fairly general research question. In
+%the end, it usually pays off to spend some extra time in the
+%beginning working on the literature review. The thesis
+%supervisor can be of assistance in deciding when the research
+%question is sufficiently specific and well-grounded in related
+%research.
+
+\section{Avgränsningar}
+\label{sec:delimitations}
+%Rapporten kommer att behandla projektets utvecklingsfaser och slutprodukt
+%vilket gör att specifika saker, som t.ex. implementations- och systemdetaljer,
+%inte kommer nämnas.
+%Målgruppen för rapporten är studenter, handledare och examinatorer vid kursen
+%TDDD96: Kandidatprojekt i programvaruutveckling vid Linköpings universitet.
+
+De avgränsningar som appliceras på applikationen täcker en rad områden. Applikationen är ett verktyg för visualisering och utför därför ingen databehandling. Den är anpassad för större skärmar och därmed inte optimal på mindre skärmar och handhållna enheter. Den är utvecklad med stöd för endast engelska.
+\begin{table}[h!]
+  \centering
+  \caption{En tabell över utvecklingsplattformar.}
+  \def\arraystretch{1.5}
+  \begin{adjustbox}{max width=\textwidth}
+    \begin{tabularx}{\textwidth}{ | l | X | }
+      \hline
+      \textbf{Operativsystem} & \textbf{Webbläsare} \\
+      \hline
+      Ubuntu 16.04 & Firefox 51.0.1 \\
+      \hline
+      macOS Sierra 10.12.3 & Chrome 55.0.2883.95 \\
+      \hline
+      Windows 8.1, 10 & Chrome 55.0.2883.95 \\
+      \hline
+    \end{tabularx}
+  \end{adjustbox}
+  \label{tab:utvecklingsplattformar}
+\end{table}
+\ \\
+Utveckling och testning har skett på ett begränsat antal plattformar som kan ses i tabell \ref{tab:utvecklingsplattformar} vilket har lett till att applikationen inte är garanterad att fungera på andra plattformar. Utvecklingen av applikationen har utförts med hjälp av ramverket Meteor. Valet att utveckling skulle ske med hjälp av Meteor beslutades efter ett möte med kund, vilket gjorde att andra tänkbara ramverk för applikationer valdes bort.
+
+%\nocite{scigen}
+%We have included Paper \ref{art:scigen}

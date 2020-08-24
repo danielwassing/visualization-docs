@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english, swedish]{babel}
+
+\usepackage{cite}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{url}
+
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%For headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Victor Bodin}
+\chead{}
+\rhead{\today}
+
+\lfoot{TDDD96}
+\rfoot{VisWiz}
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\title{Individuell del}
+\author{Victor Bodin}
+\date{\today}
+
+\selectlanguage{swedish}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+{
+\sffamily
+\centering
+\large
+
+
+{\huge 
+Individuell del
+}
+
+{\large
+Victor Bodin\\
+Version 0.1
+}
+}
+
+\clearpage
+
+\renewcommand*\contentsname{Innehållsförteckning}
+\tableofcontents
+\clearpage
+
+\clearpage
+\section{Inledning}
+\subsection{Syfte}
+Målet är att testa olika kodgranskningsmetoder som finns definierade i dokumentet Kvalitetsplan. Syftet med att testa de olika kodgranskningarna är, förutom att hitta en granskningsmetod som passar för gruppen, att säkerställa den slutliga produktens kvalitet och underhållbarhet genom att minska antalet defektet och tidigt hitta framtida problem under utvecklingens gång.\\ \\
+Eftersom utvecklingen i projektet görs enligt den agila metoden Scrum, med vissa begränsningar och anpassningar, och testningen ske regelbundet kommer kodgranskningen ske i samband med dem. Tanken är att effektiviteten av granskningarna ska mätas är genom antal fel som hittas under granskningarna och genom frågor till de projketmedlemmar som utför granskningarna. Detta för att ge både teknisk påverkan och påverkan på gruppdynamiken av kodgranskningarna.
+
+\subsection{Frågeställning}
+\begin{itemize}
+\item Är kodgranskningar en effektiv använding av projektgruppens tid? 
+\item Vilken sorts kodgranskning är mest effektiv för en projektgrupp med begränsad tid(studenter)? Fördelar/nackdelar?
+\item Vilken påverkan har kodgranskningen på gruppens samarbete?
+\end{itemize}
+
+\subsection{Definitioner}
+\section{Bakgrund}
+\section{Teori}
+\section{Metod}
+\section{Resultat}
+\section{Diskussion}
+\section{Slutsatser}
+
+
+\clearpage
+\section{Referenser}
+\begin{itemize}
+\item \url{http://smartbear.com/SmartBear/media/pdfs/best-kept-secrets-of-peer-code-review.pdf}
+% https://eds.b.ebscohost.com/eds/detail/detail?vid=1&sid=a7c93d00-ad6e-4001-b79a-1196d84f0d71%40sessionmgr104&hid=127&bdata=JkF1dGhUeXBlPWlwLHVpZCZsYW5nPXN2JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=lkp.564685&db=cat00115a
+\item Wong, Yuk Kuen. 2006. Modern software review: techniques and technologies. Hershey, Pennsylvania: IRM Press, 2006. E-Bok.
+\end{itemize}
+
+\nocite{*}
+\bibliography{designspec}{}
+\bibliographystyle{plain}
+
+\end{document}

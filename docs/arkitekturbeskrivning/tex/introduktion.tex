@@ -1,0 +1,16 @@
+\section{Inledning}
+I det här dokumentet beskrivs hur arkitekturen togs fram för en webbapplikation som visualiserar kontinuerlig integration i storskaliga system. Kontinuerlig intergration är när man kontinuerligt integrerar kodändringar så ofta som möjligt. Dessa kodändringar går igenom ett flöde av automatiserade tester för att validera kodändringens integritet innan den kan implementeras i produkten. Det händelseflöde en kodändringen går igenom är det applikationen ska visualisera. Tanken är att applikationen ska ge olika beslutsfattare ett stöd för att följa framsteg och hitta flaskhalsar i flödet av händelser i CI-systemet.
+\\ \\
+Applikationen är skriven i JavaScript och bygger på ramverket Meteor.\cite{website:javascript}\cite{website:meteor} Den genererar en aggregerad graf av händelser under en vald tidsperiod som visualiseras i en webbläsare. Om man klickar på en nod i grafen presenteras en underliggande lista av de händelser som noden inkluderar. Dessa händelser ska kunna visualiseras individuellt i en detaljerad beroendegraf. 
+\subsection{Syfte}
+I dokumentet ges en övergripande bild av hur systemets arkitektur ska bli uppbyggt. Här beskrivs övergripande riktlinjer, filosofi, motiveringar, designbeslut, krav och begränsningar gällande projektet. Även orsaker till övergivna lösningar och beslut beskrivs.
+\subsection{Definitioner}
+Här följer en förklaring av ord som används genom hela detta dokument.
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Continous Integration}]
+\item[CI] Continous Integration
+\item[Continous Integration] Arbetsmetodik för att kontinuerligt integrera, bygga och testa system-ändringar.
+\item[Eiffel] Ramverk från Ericsson som i det här projektet används för att spåra händelser i CI-system.\cite{website:eiffel}
+\item[Händelseflöde] Beskriver den kedja av händelser som sker p.g.a. en ändring i ett CI-system. Kedjan initeras av en kodändring och begränsas av att en pålitlighetsgrad sätts.
+\item[Meteor] Ramverk för webbutveckling som använder JavaScript. Version 1.4.2.6 används i detta projekt.\cite{website:meteor}
+\item[Pålitlighetsgrad] Mått på hur väl en artefakt presterat vid testning.
+\end{description}

@@ -1,0 +1,91 @@
+%%% demothesis.tex --- 
+%% 
+%% Filename: demothesis.tex
+%% Description: 
+%% Author: Ola Leifler
+%% Maintainer: 
+%% Created: Thu Oct 14 12:52:20 2010 (CEST)
+%% Version: $Id$
+%% Version: 
+%% Last-Updated: Tue Feb  7 12:58:24 2017 (+0100)
+%%           By: Ola Leifler
+%%     Update #: 161
+%% URL: 
+%% Keywords: 
+%% Compatibility: 
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Commentary: 
+%% 
+%% 
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Change log:
+%% 
+%% 
+%% RCS $Log$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%% Code:
+\documentclass[bachelor,lith,swedish]{liuthesis}
+%% Settings go in settings.tex
+\include{settings}
+\usepackage{rotating}
+\usepackage{color}
+
+% \usepackage{changebar}
+
+\department{Institutionen för datavetenskap}
+\departmentenglish{Department of Computer Science}
+\departmentshort{IDA}
+% \externalsupervisor{Min företagshandledare}
+\supervisor{Lena Buffoni}
+\examiner{Kristian Sandahl}
+\titleswedish{Val av verktyg vid projektdokumentation}
+%\subtitleswedish{}
+\titleenglish{Choice of tools for project documentation}
+%\subtitleenglish{}
+\thesissubject{Datateknik}
+
+\publicationyear{2017}
+\currentyearthesisnumber{001}
+\dateofpublication{2017-03-06}
+\author{Daniel Wassing}
+
+%\author{\text{\textbackslash author}}
+
+% Two authors
+% \author{\parbox{\textwidth}{Ola Leifler\\
+%   Alexander Sanner}}
+
+\begin{document}
+
+\chapterstyle{VZ43}
+
+%references:
+%https://www.computer.org/csdl/proceedings/hicss/2009/3450/00/10-08-06.pdf MAIN REFERENCE
+%https://www.sharelatex.com/blog/2012/10/16/collaborating-with-latex-and-git.html
+%https://scigit.wordpress.com/2014/01/02/how-scigit-and-other-services-are-different/
+
+%other material will be found through questionnaires and other books/blogs/conference proceedings as the project progresses.
+\include{intro}
+\newpage
+\include{theory}
+\newpage
+\include{method}
+\newpage
+\include{results}
+\newpage
+\include{discussion}
+\newpage
+\include{conclusion}
+\clearpage
+\printbibliography
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% demothesis.tex ends here
+
